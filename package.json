@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apify": "^3.6.0",
     "cheerio": "^1.0.0",
     "crawlee": "^3.12.2",
     "playwright": "^1.50.1"
