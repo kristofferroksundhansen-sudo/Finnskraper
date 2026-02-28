@@ -1,6 +1,7 @@
-import { PlaywrightCrawler, Dataset } from 'crawlee';
+import { PlaywrightCrawler } from 'crawlee';
+import { Actor } from 'apify';
 
-// We use ES module syntax. We'll rename this to main.mjs or add "type": "module" to package.json.
+await Actor.init();
 
 const crawler = new PlaywrightCrawler({
     // Function called for each URL
@@ -54,8 +55,8 @@ const crawler = new PlaywrightCrawler({
         // Filter and clean the data
         for (const item of listings) {
             if (item.title && item.url) {
-                // Ensure it's a Nissan Leaf (just to be safe) and we also record the location
-                await Dataset.pushData(item);
+                // Use Actor explicitly
+                await Actor.pushData(item);
             }
         }
 
@@ -90,4 +91,6 @@ await crawler.addRequests([START_URL]);
 
 console.log('Starting crawler...');
 await crawler.run();
-console.log('Crawler finished. Data is stored in ./storage/datasets/default');
+console.log('Crawler finished. Data is stored in Apify Actor Dataset');
+
+await Actor.exit();
