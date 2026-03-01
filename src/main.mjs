@@ -126,8 +126,7 @@ const crawler = new PlaywrightCrawler({
 // location=0.20061 (Oslo), location=1.20061.20507 or similar for Vestfold.
 // To avoid guessing IDs, we can just use the query and perhaps region filters if we know them, 
 // or let the user provide the exact search URL. 
-// For now, let's start with a general query.
-const START_URL = 'https://www.finn.no/car/used/search.html?q=Nissan+Leaf';
+const START_URL = 'https://www.finn.no/mobility/search/car?location=0.20008&location=0.20061&registration_class=1&variant=1.792.2000183';
 
 await crawler.addRequests([START_URL]);
 
