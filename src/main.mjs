@@ -18,6 +18,33 @@ const crawler = new PlaywrightCrawler({
             // No cookie banner found
         }
 
+        if (request.label === 'DETAIL') {
+            await page.waitForTimeout(2000); // 2 seconds to let things load
+
+            const specs = await page.$$eval('dt', (dts) => {
+                const specData = {};
+                for (const dt of dts) {
+                    const key = dt.textContent;
+                    const dd = dt.nextElementSibling;
+                    if (dd && dd.tagName.toLowerCase() === 'dd') {
+                        const value = dd.textContent;
+                        if (key && value) {
+                            let cleanValue = value.trim().replace(/\s+/g, ' ').replace(/kr \(.*?\)/, 'kr');
+                            specData[key.trim()] = cleanValue;
+                        }
+                    }
+                }
+                return specData;
+            });
+
+            await Actor.pushData({
+                url: request.url,
+                ...request.userData,
+                specifications: specs
+            });
+            return;
+        }
+
         // Wait for listings to be visible (or just wait a bit)
         await page.waitForTimeout(5000); // 5 seconds to let things load
 
@@ -52,11 +79,21 @@ const crawler = new PlaywrightCrawler({
 
         log.info(`Found ${listings.length} listings on this page.`);
 
-        // Filter and clean the data
+        // Enqueue detail pages instead of immediately pushing data
         for (const item of listings) {
             if (item.title && item.url) {
-                // Use Actor explicitly
-                await Actor.pushData(item);
+                const absoluteUrl = item.url.startsWith('http') ? item.url : `https://www.finn.no${item.url}`;
+                await crawler.addRequests([{
+                    url: absoluteUrl,
+                    label: 'DETAIL',
+                    userData: {
+                        title: item.title,
+                        price: item.price,
+                        year: item.year,
+                        mileage: item.mileage,
+                        location: item.location
+                    }
+                }]);
             }
         }
 
