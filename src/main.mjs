@@ -12,7 +12,7 @@ const crawler = new PlaywrightCrawler({
     // Increase timeouts so Apify doesn't kill it as easily
     requestHandlerTimeoutSecs: 180,
     maxRequestRetries: 3,
-    maxRequestsPerCrawl: 200, // Safe default to avoid scraping entire finn.no during testing
+    maxRequestsPerCrawl: 500, // User requested a safe limit of 100-500 per run
 
     // Function called for each URL
     requestHandler: async ({ page, request, log }) => {
