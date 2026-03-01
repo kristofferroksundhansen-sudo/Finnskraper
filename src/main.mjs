@@ -4,6 +4,11 @@ import { Actor } from 'apify';
 await Actor.init();
 
 const crawler = new PlaywrightCrawler({
+    // Increase timeouts so Apify doesn't kill it as easily
+    requestHandlerTimeoutSecs: 180,
+    maxRequestRetries: 3,
+    maxRequestsPerCrawl: 200, // Safe default to avoid scraping entire finn.no during testing
+
     // Function called for each URL
     requestHandler: async ({ page, request, log }) => {
         log.info(`Processing ${request.url}...`);
