@@ -1,0 +1,30 @@
+{
+    "title": "Finn.no Bilsøk Scraper",
+    "description": "Legg inn lenken fra Finn.no Bilsøk du vil skrape.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Finn.no Søkelenke",
+            "type": "array",
+            "description": "Lim inn hele URL-en fra finn.no her. Kan være bilsøk med alle mulige filter (fylke, bilmerke, etc).",
+            "prefill": [
+                {
+                    "url": "https://www.finn.no/mobility/search/car?location=0.20008&location=0.20061&registration_class=1&variant=1.792.2000183"
+                }
+            ],
+            "editor": "requestListSources"
+        },
+        "datasetName": {
+            "title": "Navn på Datasett (Database)",
+            "type": "string",
+            "description": "Navnet på databasen som resultatene skal lagres permanent i. Skriver du samme navn hver gang, vil bilene legge seg på rad og rekke og databasen vil vokse.",
+            "prefill": "finn-cars-db",
+            "editor": "textfield"
+        }
+    },
+    "required": [
+        "startUrls",
+        "datasetName"
+    ]
+}

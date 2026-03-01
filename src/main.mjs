@@ -2,7 +2,11 @@ import { PlaywrightCrawler } from 'crawlee';
 import { Actor, Dataset } from 'apify';
 
 await Actor.init();
-const dataset = await Dataset.open('finn-cars-db');
+const input = await Actor.getInput() || {};
+const startUrls = input.startUrls?.map(req => req.url) || ['https://www.finn.no/car/used/search.html'];
+const datasetName = input.datasetName || 'finn-cars-db';
+
+const dataset = await Dataset.open(datasetName);
 
 const crawler = new PlaywrightCrawler({
     // Increase timeouts so Apify doesn't kill it as easily
@@ -123,16 +127,11 @@ const crawler = new PlaywrightCrawler({
 });
 
 // Finn.no parameters:
-// make=0.792 (Nissan) -> This is an example, let's just use the query parameter 'q=Nissan+Leaf' for safety.
-// location=0.20061 (Oslo), location=1.20061.20507 or similar for Vestfold.
-// To avoid guessing IDs, we can just use the query and perhaps region filters if we know them, 
-// or let the user provide the exact search URL. 
-const START_URL = 'https://www.finn.no/mobility/search/car?location=0.20008&location=0.20061&registration_class=1&variant=1.792.2000183';
+// Read startUrls from Actor Input or default to our fallback
+await crawler.addRequests(startUrls);
 
-await crawler.addRequests([START_URL]);
-
-console.log('Starting crawler...');
+console.log(`Starting crawler pointing towards ${datasetName}...`);
 await crawler.run();
-console.log('Crawler finished. Data is stored in Apify Actor Dataset');
+console.log(`Crawler finished. Data is stored in Apify Actor Dataset: ${datasetName}`);
 
 await Actor.exit();
