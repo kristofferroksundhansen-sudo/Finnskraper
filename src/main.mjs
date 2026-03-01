@@ -134,18 +134,35 @@ const crawler = new PlaywrightCrawler({
             }
         }
 
-        // Find the "Next" page link and enqueue it
-        const nextButton = await page.$('a.button--icon-right:has-text("Neste"), a[aria-label="Neste side"]');
-        if (nextButton) {
-            const nextUrl = await nextButton.getAttribute('href');
-            if (nextUrl) {
-                log.info(`Enqueuing next page: ${nextUrl}`);
-                const absoluteUrl = nextUrl.startsWith('http') ? nextUrl : `https://www.finn.no${nextUrl}`;
-                await crawler.addRequests([absoluteUrl]);
-            }
+        // --- Paginering ---
+        // Finn.no bruker URL-basert paginering: ?page=2, ?page=3 osv.
+        // Strategi 1: les href fra "Neste side"-lenken direkte
+        const nextHref = await page.evaluate(() => {
+            const a = document.querySelector('a[aria-label="Neste side"]');
+            return a ? a.getAttribute('href') : null;
+        });
+
+        if (nextHref) {
+            const absoluteUrl = nextHref.startsWith('http')
+                ? nextHref
+                : `https://www.finn.no${nextHref}`;
+            log.info(`Enqueuing next page (from link): ${absoluteUrl}`);
+            await crawler.addRequests([absoluteUrl]);
         } else {
-            log.info('No next page found or pagination ended.');
+            // Strategi 2 (fallback): bygg neste side-URL fra gjeldende URL
+            const currentUrl = new URL(request.url);
+            const currentPage = parseInt(currentUrl.searchParams.get('page') || '1', 10);
+            // Ingen "Neste"-lenke = siste side, men dobbeltsjekk ved å se om vi fikk resultater
+            if (listings.length > 0) {
+                const nextPage = currentPage + 1;
+                currentUrl.searchParams.set('page', nextPage);
+                log.info(`Enqueuing next page (URL fallback): ${currentUrl.toString()}`);
+                await crawler.addRequests([currentUrl.toString()]);
+            } else {
+                log.info('Ingen flere sider – paginering ferdig.');
+            }
         }
+
     },
     // Let's handle failed requests
     failedRequestHandler({ request, log }) {
