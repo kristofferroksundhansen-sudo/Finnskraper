@@ -97,6 +97,14 @@ def main():
     else:
         df['effect_cleaned'] = pd.NA
         
+    if 'spec_Neste frist for EU-kontroll' in df.columns:
+        # Konverter dato fra format "30.04.2025"
+        eu_dates = pd.to_datetime(df['spec_Neste frist for EU-kontroll'], format='%d.%m.%Y', errors='coerce')
+        # Regn ut avstand fra dagens dato (forventer rundt i dag minus frist i antall dager / 30 for måneder)
+        df['months_to_eu_cleaned'] = (eu_dates - pd.Timestamp.now()).dt.days / 30.0
+    else:
+        df['months_to_eu_cleaned'] = pd.NA
+        
     # Drop rows where we couldn't parse essential ML info first
     df = df.dropna(subset=['price_cleaned', 'mileage_cleaned', 'year_cleaned'])
     
@@ -105,6 +113,7 @@ def main():
     effect_median = df['effect_cleaned'].median()
     df['battery_capacity_cleaned'] = df['battery_capacity_cleaned'].fillna(battery_median if pd.notnull(battery_median) else 40)
     df['effect_cleaned'] = df['effect_cleaned'].fillna(effect_median if pd.notnull(effect_median) else 109)
+    df['months_to_eu_cleaned'] = df['months_to_eu_cleaned'].fillna(12.0) # Assume average 12 months if unknown
     
     # Optional: Filter out obvious outliers (e.g., cars older than 2005 or price < 10000)
     df = df[(df['year_cleaned'] >= 2010) & (df['price_cleaned'] > 10000)]
@@ -114,7 +123,7 @@ def main():
     df.to_csv(output_path, index=False)
     
     print(f"Cleaning complete! Saved {len(df)} valid rows to {output_path}")
-    print(df[['title', 'price_cleaned', 'year_cleaned', 'mileage_cleaned', 'battery_capacity_cleaned', 'effect_cleaned']].head())
+    print(df[['title', 'price_cleaned', 'year_cleaned', 'mileage_cleaned', 'battery_capacity_cleaned', 'effect_cleaned', 'months_to_eu_cleaned']].head())
 
 if __name__ == "__main__":
     main()
