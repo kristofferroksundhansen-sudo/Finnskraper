@@ -1,7 +1,8 @@
 import { PlaywrightCrawler } from 'crawlee';
-import { Actor } from 'apify';
+import { Actor, Dataset } from 'apify';
 
 await Actor.init();
+const dataset = await Dataset.open('finn-cars-db');
 
 const crawler = new PlaywrightCrawler({
     // Increase timeouts so Apify doesn't kill it as easily
@@ -42,7 +43,7 @@ const crawler = new PlaywrightCrawler({
                 return specData;
             });
 
-            await Actor.pushData({
+            await dataset.pushData({
                 url: request.url,
                 ...request.userData,
                 specifications: specs
