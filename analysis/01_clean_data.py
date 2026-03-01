@@ -3,6 +3,10 @@ import os
 import glob
 import pandas as pd
 import re
+from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def parse_price(price_str):
     if not isinstance(price_str, str):
@@ -36,11 +40,34 @@ def parse_effect(effect_str):
     num = re.sub(r'[^\d]', '', effect_str)
     return int(num) if num else None
 
+def parse_owners(owners_str):
+    """Parse 'Eiere' field, e.g. '1' or '2'."""
+    if not isinstance(owners_str, str):
+        return None
+    num = re.sub(r'[^\d]', '', owners_str)
+    return int(num) if num else None
+
+def parse_condition_flag(value_str):
+    """Returns 1 if a known defect is reported (Ja), 0 if not (Nei), None if unknown."""
+    if not isinstance(value_str, str):
+        return None
+    v = value_str.strip().lower()
+    if v in ('ja', 'yes'):
+        return 1
+    elif v in ('nei', 'no'):
+        return 0
+    return None
+
 def load_data_from_apify():
     import requests
-    # Using the exact Dataset ID provided by the user
-    url = "https://api.apify.com/v2/datasets/coaQqZ546k670rFMd/items?token=REDACTED"
-    print("Fetching data directly from Apify dataset 'coaQqZ546k670rFMd'...")
+    dataset_id = os.getenv('APIFY_DATASET_ID')
+    api_token  = os.getenv('APIFY_API_TOKEN')
+    if not dataset_id or not api_token:
+        raise EnvironmentError(
+            "Mangler APIFY_DATASET_ID eller APIFY_API_TOKEN i .env-filen."
+        )
+    url = f"https://api.apify.com/v2/datasets/{dataset_id}/items?token={api_token}"
+    print(f"Fetching data from Apify dataset '{dataset_id}'...")
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -98,22 +125,37 @@ def main():
         df['effect_cleaned'] = pd.NA
         
     if 'spec_Neste frist for EU-kontroll' in df.columns:
-        # Konverter dato fra format "30.04.2025"
         eu_dates = pd.to_datetime(df['spec_Neste frist for EU-kontroll'], format='%d.%m.%Y', errors='coerce')
-        # Regn ut avstand fra dagens dato (forventer rundt i dag minus frist i antall dager / 30 for måneder)
         df['months_to_eu_cleaned'] = (eu_dates - pd.Timestamp.now()).dt.days / 30.0
     else:
         df['months_to_eu_cleaned'] = pd.NA
-        
+
+    # Antall eiere
+    if 'spec_Eiere' in df.columns:
+        df['owners_cleaned'] = df['spec_Eiere'].apply(parse_owners)
+    else:
+        df['owners_cleaned'] = pd.NA
+
+    # Tilstandsflagg – slå sammen til én «has_issue»-kolonne (1 = minst ett problem rapportert)
+    # Finn alle spec-kolonner som inneholder tilstandsspørsmål
+    condition_cols = [c for c in df.columns if c.startswith('spec_condition_')]
+    if condition_cols:
+        flag_matrix = df[condition_cols].apply(lambda col: col.map(parse_condition_flag))
+        df['has_condition_issue'] = (flag_matrix == 1).any(axis=1).astype(int)
+    else:
+        df['has_condition_issue'] = 0
+
     # Drop rows where we couldn't parse essential ML info first
     df = df.dropna(subset=['price_cleaned', 'mileage_cleaned', 'year_cleaned'])
     
-    # Impute missing values for battery and effect using median
+    # Impute missing values using median / sensible defaults
     battery_median = df['battery_capacity_cleaned'].median()
     effect_median = df['effect_cleaned'].median()
+    owners_median = df['owners_cleaned'].median()
     df['battery_capacity_cleaned'] = df['battery_capacity_cleaned'].fillna(battery_median if pd.notnull(battery_median) else 40)
     df['effect_cleaned'] = df['effect_cleaned'].fillna(effect_median if pd.notnull(effect_median) else 109)
-    df['months_to_eu_cleaned'] = df['months_to_eu_cleaned'].fillna(12.0) # Assume average 12 months if unknown
+    df['months_to_eu_cleaned'] = df['months_to_eu_cleaned'].fillna(12.0)  # Anta 12 måneder hvis ukjent
+    df['owners_cleaned'] = df['owners_cleaned'].fillna(owners_median if pd.notnull(owners_median) else 2)
     
     # Optional: Filter out obvious outliers (e.g., cars older than 2005 or price < 10000)
     df = df[(df['year_cleaned'] >= 2010) & (df['price_cleaned'] > 10000)]
@@ -123,7 +165,9 @@ def main():
     df.to_csv(output_path, index=False)
     
     print(f"Cleaning complete! Saved {len(df)} valid rows to {output_path}")
-    print(df[['title', 'price_cleaned', 'year_cleaned', 'mileage_cleaned', 'battery_capacity_cleaned', 'effect_cleaned', 'months_to_eu_cleaned']].head())
+    print(df[['title', 'price_cleaned', 'year_cleaned', 'mileage_cleaned',
+               'battery_capacity_cleaned', 'effect_cleaned',
+               'months_to_eu_cleaned', 'owners_cleaned', 'has_condition_issue']].head())
 
 if __name__ == "__main__":
     main()

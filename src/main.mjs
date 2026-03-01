@@ -5,6 +5,7 @@ await Actor.init();
 const input = await Actor.getInput() || {};
 const startUrls = input.startUrls?.map(req => req.url) || ['https://www.finn.no/car/used/search.html'];
 const datasetName = input.datasetName || 'finn-cars-db';
+const maxRequests = input.maxRequests || 500;
 
 const dataset = await Dataset.open(datasetName);
 
@@ -12,7 +13,7 @@ const crawler = new PlaywrightCrawler({
     // Increase timeouts so Apify doesn't kill it as easily
     requestHandlerTimeoutSecs: 180,
     maxRequestRetries: 3,
-    maxRequestsPerCrawl: 500, // User requested a safe limit of 100-500 per run
+    maxRequestsPerCrawl: maxRequests,
 
     // Function called for each URL
     requestHandler: async ({ page, request, log }) => {
@@ -47,10 +48,36 @@ const crawler = new PlaywrightCrawler({
                 return specData;
             });
 
+            // Scrape the condition report ("Selgers kjennskap til bilen")
+            // Finn.no renders these as rows with a label and a Ja/Nei badge
+            const conditionFlags = await page.evaluate(() => {
+                const result = {};
+                // Try structured list items first (most common layout)
+                const rows = document.querySelectorAll('[data-testid="condition-item"], .u-word-break');
+                rows.forEach(row => {
+                    const label = row.querySelector('.condition-label, dt, strong, span:first-child');
+                    const value = row.querySelector('.condition-value, dd, [class*="badge"], span:last-child');
+                    if (label && value) {
+                        const key = label.textContent.trim();
+                        const val = value.textContent.trim();
+                        if (key && val) result[`condition_${key}`] = val;
+                    }
+                });
+                // Fallback: look for any element pair where text contains Ja/Nei
+                if (Object.keys(result).length === 0) {
+                    document.querySelectorAll('li').forEach(li => {
+                        const text = li.textContent.trim();
+                        const match = text.match(/^(.+?)\s+(Ja|Nei)$/);
+                        if (match) result[`condition_${match[1].trim()}`] = match[2];
+                    });
+                }
+                return result;
+            });
+
             await dataset.pushData({
                 url: request.url,
                 ...request.userData,
-                specifications: specs
+                specifications: { ...specs, ...conditionFlags }
             });
             return;
         }

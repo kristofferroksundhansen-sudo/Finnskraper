@@ -4,6 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 import joblib
 import os
+from datetime import datetime
 
 def main():
     print("--- Starting Model Training ---")
@@ -17,11 +18,15 @@ def main():
     print(f"Loaded {len(df)} rows for training.")
     
     # Define our Features (X) and Target (y)
-    # Features: age (current year - model year) and mileage
-    current_year = 2026 # Or dynamically fetch
+    current_year = datetime.now().year
     df['age'] = current_year - df['year_cleaned']
-    
-    X = df[['age', 'mileage_cleaned', 'battery_capacity_cleaned', 'effect_cleaned', 'months_to_eu_cleaned']]
+
+    feature_cols = ['age', 'mileage_cleaned', 'battery_capacity_cleaned',
+                    'effect_cleaned', 'months_to_eu_cleaned',
+                    'owners_cleaned', 'has_condition_issue']
+    # Only use features that exist in the data (backwards compatibility)
+    feature_cols = [c for c in feature_cols if c in df.columns]
+    X = df[feature_cols]
     y = df['price_cleaned']
     
     # Split into training and testing sets (80% train, 20% test)
@@ -46,15 +51,12 @@ def main():
     # Feature Importance
     importances = model.feature_importances_
     print("\n--- Feature Importance ---")
-    print(f"Age: {importances[0]*100:.2f}% impact on price")
-    print(f"Mileage: {importances[1]*100:.2f}% impact on price")
-    print(f"Battery Capacity: {importances[2]*100:.2f}% impact on price")
-    print(f"Horsepower: {importances[3]*100:.2f}% impact on price")
-    print(f"Months to EU-control: {importances[4]*100:.2f}% impact on price")
+    for feat, imp in zip(feature_cols, importances):
+        print(f"{feat}: {imp*100:.2f}% impact on price")
     
-    # Save the model to disk so we can use it to find deals later
+    # Save model AND feature list so 03_find_deals.py uses the same columns
     model_path = "leaf_model.pkl"
-    joblib.dump(model, model_path)
+    joblib.dump({'model': model, 'feature_cols': feature_cols}, model_path)
     print(f"\nModel saved successfully to {model_path}!")
 
 if __name__ == "__main__":

@@ -21,6 +21,13 @@
             "description": "Navnet på databasen som resultatene skal lagres permanent i. Skriver du samme navn hver gang, vil bilene legge seg på rad og rekke og databasen vil vokse.",
             "prefill": "finn-cars-db",
             "editor": "textfield"
+        },
+        "maxRequests": {
+            "title": "Maks antall sider å hente",
+            "type": "integer",
+            "description": "Maksimalt antall sider (liste- og detaljsider) scraperen skal besøke per kjøring. En typisk listeside inneholder ~25 biler, så 500 = ca. 10 listesider + tilhørende detaljsider.",
+            "prefill": 500,
+            "editor": "number"
         }
     },
     "required": [

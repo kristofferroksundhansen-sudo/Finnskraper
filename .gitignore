@@ -7,3 +7,10 @@ inspect_dom.js
 package-lock.json
 playwright-report/
 test-results/
+
+# Credentials – aldri commit disse
+.env
+analysis/.env
+
+# Scratch/testfiler
+test_dealer.js
