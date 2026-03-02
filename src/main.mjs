@@ -9,6 +9,21 @@ const maxRequests = input.maxRequests || 500;
 
 const dataset = await Dataset.open(datasetName);
 
+// --- Deduplisering: Last eksisterende URL-er fra datasettet ---
+const knownUrls = new Set();
+let offset = 0;
+const limit = 1000;
+while (true) {
+    const batch = await dataset.getData({ offset, limit, fields: ['url'] });
+    if (!batch.items || batch.items.length === 0) break;
+    for (const item of batch.items) {
+        if (item.url) knownUrls.add(item.url);
+    }
+    offset += batch.items.length;
+    if (offset >= batch.total) break;
+}
+console.log(`Loaded ${knownUrls.size} known ad URLs from dataset – these will be skipped.`);
+
 const crawler = new PlaywrightCrawler({
     // Increase timeouts so Apify doesn't kill it as easily
     requestHandlerTimeoutSecs: 180,
@@ -116,10 +131,17 @@ const crawler = new PlaywrightCrawler({
 
         log.info(`Found ${listings.length} listings on this page.`);
 
-        // Enqueue detail pages instead of immediately pushing data
+        // Enqueue detail pages – skip ads we already have in the dataset
+        let newCount = 0;
+        let skippedCount = 0;
         for (const item of listings) {
             if (item.title && item.url) {
                 const absoluteUrl = item.url.startsWith('http') ? item.url : `https://www.finn.no${item.url}`;
+                if (knownUrls.has(absoluteUrl)) {
+                    skippedCount++;
+                    continue;
+                }
+                newCount++;
                 await crawler.addRequests([{
                     url: absoluteUrl,
                     label: 'DETAIL',
@@ -133,6 +155,7 @@ const crawler = new PlaywrightCrawler({
                 }]);
             }
         }
+        log.info(`Page results: ${newCount} new ads enqueued, ${skippedCount} known ads skipped.`);
 
         // --- Paginering ---
         // Finn.no bruker URL-basert paginering: ?page=2, ?page=3 osv.
