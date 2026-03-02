@@ -24,6 +24,9 @@ while (true) {
 }
 console.log(`Loaded ${knownUrls.size} known ad URLs from dataset – these will be skipped.`);
 
+// Collect detail page requests here – they will be fed to CheerioCrawler AFTER list crawling
+const pendingDetails = [];
+
 // =====================================================================
 // DETAIL CRAWLER — CheerioCrawler (lightweight HTTP, no browser needed)
 // =====================================================================
@@ -148,7 +151,7 @@ const listCrawler = new PlaywrightCrawler({
                     continue;
                 }
                 newCount++;
-                await detailCrawler.addRequests([{
+                pendingDetails.push({
                     url: absoluteUrl,
                     userData: {
                         title: item.title,
@@ -157,7 +160,7 @@ const listCrawler = new PlaywrightCrawler({
                         mileage: item.mileage,
                         location: item.location
                     }
-                }]);
+                });
             }
         }
         log.info(`Page results: ${newCount} new ads enqueued to Cheerio, ${skippedCount} known ads skipped.`);
@@ -200,7 +203,8 @@ await listCrawler.addRequests(startUrls);
 
 console.log(`Starting list crawler (Playwright) pointing towards ${datasetName}...`);
 await listCrawler.run();
-console.log(`List pages done. Starting detail crawler (Cheerio)...`);
+console.log(`List pages done. ${pendingDetails.length} detail pages to scrape via Cheerio...`);
+await detailCrawler.addRequests(pendingDetails);
 await detailCrawler.run();
 console.log(`All done! Data is stored in Apify Actor Dataset: ${datasetName}`);
 
