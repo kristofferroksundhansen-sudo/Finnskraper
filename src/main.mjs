@@ -1,4 +1,4 @@
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler, CheerioCrawler } from 'crawlee';
 import { Actor, Dataset } from 'apify';
 
 await Actor.init();
@@ -24,15 +24,76 @@ while (true) {
 }
 console.log(`Loaded ${knownUrls.size} known ad URLs from dataset – these will be skipped.`);
 
-const crawler = new PlaywrightCrawler({
-    // Increase timeouts so Apify doesn't kill it as easily
+// =====================================================================
+// DETAIL CRAWLER — CheerioCrawler (lightweight HTTP, no browser needed)
+// =====================================================================
+const detailCrawler = new CheerioCrawler({
+    maxRequestRetries: 3,
+    maxConcurrency: 5,             // Can run many in parallel – no browser overhead
+    requestHandlerTimeoutSecs: 60,
+
+    requestHandler: async ({ $, request, log }) => {
+        log.info(`[Cheerio] Detail: ${request.url}`);
+
+        // Scrape specification table (dt/dd pairs)
+        const specs = {};
+        $('dt').each((i, dt) => {
+            const key = $(dt).text().trim();
+            const dd = $(dt).next('dd');
+            if (dd.length) {
+                let cleanValue = dd.text().trim().replace(/\s+/g, ' ').replace(/kr \(.*?\)/, 'kr');
+                if (key && cleanValue) {
+                    specs[key] = cleanValue;
+                }
+            }
+        });
+
+        // Scrape condition report ("Selgers kjennskap til bilen")
+        const conditionFlags = {};
+
+        // Strategy 1: structured list items with data-testid
+        $('[data-testid="condition-item"], .u-word-break').each((i, row) => {
+            const $row = $(row);
+            const label = $row.find('.condition-label, dt, strong, span:first-child').first();
+            const value = $row.find('.condition-value, dd, [class*="badge"], span:last-child').first();
+            if (label.length && value.length) {
+                const key = label.text().trim();
+                const val = value.text().trim();
+                if (key && val) conditionFlags[`condition_${key}`] = val;
+            }
+        });
+
+        // Strategy 2 (fallback): look for li elements containing Ja/Nei
+        if (Object.keys(conditionFlags).length === 0) {
+            $('li').each((i, li) => {
+                const text = $(li).text().trim();
+                const match = text.match(/^(.+?)\s+(Ja|Nei)$/);
+                if (match) conditionFlags[`condition_${match[1].trim()}`] = match[2];
+            });
+        }
+
+        await dataset.pushData({
+            url: request.url,
+            ...request.userData,
+            specifications: { ...specs, ...conditionFlags }
+        });
+    },
+
+    failedRequestHandler({ request, log }) {
+        log.error(`[Cheerio] Detail request failed: ${request.url}`);
+    },
+});
+
+// =====================================================================
+// LIST CRAWLER — PlaywrightCrawler (needs JS rendering for search pages)
+// =====================================================================
+const listCrawler = new PlaywrightCrawler({
     requestHandlerTimeoutSecs: 180,
     maxRequestRetries: 3,
     maxRequestsPerCrawl: maxRequests,
 
-    // Function called for each URL
     requestHandler: async ({ page, request, log }) => {
-        log.info(`Processing ${request.url}...`);
+        log.info(`[Playwright] List page: ${request.url}`);
 
         // Handle cookie consent if it appears
         try {
@@ -44,61 +105,8 @@ const crawler = new PlaywrightCrawler({
             // No cookie banner found
         }
 
-        if (request.label === 'DETAIL') {
-            await page.waitForTimeout(2000); // 2 seconds to let things load
-
-            const specs = await page.$$eval('dt', (dts) => {
-                const specData = {};
-                for (const dt of dts) {
-                    const key = dt.textContent;
-                    const dd = dt.nextElementSibling;
-                    if (dd && dd.tagName.toLowerCase() === 'dd') {
-                        const value = dd.textContent;
-                        if (key && value) {
-                            let cleanValue = value.trim().replace(/\s+/g, ' ').replace(/kr \(.*?\)/, 'kr');
-                            specData[key.trim()] = cleanValue;
-                        }
-                    }
-                }
-                return specData;
-            });
-
-            // Scrape the condition report ("Selgers kjennskap til bilen")
-            // Finn.no renders these as rows with a label and a Ja/Nei badge
-            const conditionFlags = await page.evaluate(() => {
-                const result = {};
-                // Try structured list items first (most common layout)
-                const rows = document.querySelectorAll('[data-testid="condition-item"], .u-word-break');
-                rows.forEach(row => {
-                    const label = row.querySelector('.condition-label, dt, strong, span:first-child');
-                    const value = row.querySelector('.condition-value, dd, [class*="badge"], span:last-child');
-                    if (label && value) {
-                        const key = label.textContent.trim();
-                        const val = value.textContent.trim();
-                        if (key && val) result[`condition_${key}`] = val;
-                    }
-                });
-                // Fallback: look for any element pair where text contains Ja/Nei
-                if (Object.keys(result).length === 0) {
-                    document.querySelectorAll('li').forEach(li => {
-                        const text = li.textContent.trim();
-                        const match = text.match(/^(.+?)\s+(Ja|Nei)$/);
-                        if (match) result[`condition_${match[1].trim()}`] = match[2];
-                    });
-                }
-                return result;
-            });
-
-            await dataset.pushData({
-                url: request.url,
-                ...request.userData,
-                specifications: { ...specs, ...conditionFlags }
-            });
-            return;
-        }
-
-        // Wait for listings to be visible (or just wait a bit)
-        await page.waitForTimeout(5000); // 5 seconds to let things load
+        // Wait for listings to be visible
+        await page.waitForTimeout(5000);
 
         // Extract listings
         const listings = await page.$$eval('.mobility-search-ad-card', (articles) => {
@@ -106,7 +114,6 @@ const crawler = new PlaywrightCrawler({
                 const linkEl = article.querySelector('a.sf-search-ad-link');
                 const priceEl = article.querySelector('.t3.font-bold');
 
-                // Details contains format like "2016 ∙ 110&nbsp;682 km ∙ El ∙ 250 km rekkevidde"
                 const detailsEl = article.querySelector('.text-caption.font-bold');
                 const detailsText = detailsEl ? detailsEl.innerText.trim() : '';
                 const parts = detailsText.split('∙').map(p => p.trim());
@@ -114,7 +121,6 @@ const crawler = new PlaywrightCrawler({
                 let year = parts[0] || '';
                 let mileage = parts[1] || '';
 
-                // Location is typically the first span inside the flex-col
                 const locationSpans = article.querySelectorAll('.flex.flex-col > span.truncate');
                 const location = locationSpans.length > 0 ? locationSpans[0].innerText.trim() : '';
 
@@ -131,7 +137,7 @@ const crawler = new PlaywrightCrawler({
 
         log.info(`Found ${listings.length} listings on this page.`);
 
-        // Enqueue detail pages – skip ads we already have in the dataset
+        // Enqueue detail pages to the CheerioCrawler – skip known ads
         let newCount = 0;
         let skippedCount = 0;
         for (const item of listings) {
@@ -142,9 +148,8 @@ const crawler = new PlaywrightCrawler({
                     continue;
                 }
                 newCount++;
-                await crawler.addRequests([{
+                await detailCrawler.addRequests([{
                     url: absoluteUrl,
-                    label: 'DETAIL',
                     userData: {
                         title: item.title,
                         price: item.price,
@@ -155,11 +160,9 @@ const crawler = new PlaywrightCrawler({
                 }]);
             }
         }
-        log.info(`Page results: ${newCount} new ads enqueued, ${skippedCount} known ads skipped.`);
+        log.info(`Page results: ${newCount} new ads enqueued to Cheerio, ${skippedCount} known ads skipped.`);
 
         // --- Paginering ---
-        // Finn.no bruker URL-basert paginering: ?page=2, ?page=3 osv.
-        // Strategi 1: les href fra "Neste side"-lenken direkte
         const nextHref = await page.evaluate(() => {
             const a = document.querySelector('a[aria-label="Neste side"]');
             return a ? a.getAttribute('href') : null;
@@ -170,35 +173,35 @@ const crawler = new PlaywrightCrawler({
                 ? nextHref
                 : `https://www.finn.no${nextHref}`;
             log.info(`Enqueuing next page (from link): ${absoluteUrl}`);
-            await crawler.addRequests([absoluteUrl]);
+            await listCrawler.addRequests([absoluteUrl]);
         } else {
-            // Strategi 2 (fallback): bygg neste side-URL fra gjeldende URL
             const currentUrl = new URL(request.url);
             const currentPage = parseInt(currentUrl.searchParams.get('page') || '1', 10);
-            // Ingen "Neste"-lenke = siste side, men dobbeltsjekk ved å se om vi fikk resultater
             if (listings.length > 0) {
                 const nextPage = currentPage + 1;
                 currentUrl.searchParams.set('page', nextPage);
                 log.info(`Enqueuing next page (URL fallback): ${currentUrl.toString()}`);
-                await crawler.addRequests([currentUrl.toString()]);
+                await listCrawler.addRequests([currentUrl.toString()]);
             } else {
                 log.info('Ingen flere sider – paginering ferdig.');
             }
         }
-
     },
-    // Let's handle failed requests
+
     failedRequestHandler({ request, log }) {
-        log.error(`Request ${request.url} failed too many times.`);
+        log.error(`[Playwright] List request failed: ${request.url}`);
     },
 });
 
-// Finn.no parameters:
-// Read startUrls from Actor Input or default to our fallback
-await crawler.addRequests(startUrls);
+// =====================================================================
+// RUN: First crawl list pages (Playwright), then detail pages (Cheerio)
+// =====================================================================
+await listCrawler.addRequests(startUrls);
 
-console.log(`Starting crawler pointing towards ${datasetName}...`);
-await crawler.run();
-console.log(`Crawler finished. Data is stored in Apify Actor Dataset: ${datasetName}`);
+console.log(`Starting list crawler (Playwright) pointing towards ${datasetName}...`);
+await listCrawler.run();
+console.log(`List pages done. Starting detail crawler (Cheerio)...`);
+await detailCrawler.run();
+console.log(`All done! Data is stored in Apify Actor Dataset: ${datasetName}`);
 
 await Actor.exit();
