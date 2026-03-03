@@ -1,5 +1,10 @@
 import pandas as pd
 import numpy as np
+import argparse
+import json
+import os
+import warnings
+from datetime import datetime
 from sklearn.model_selection import train_test_split, cross_val_score, RandomizedSearchCV
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
@@ -8,22 +13,51 @@ from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 import shap
 import joblib
-import os
-import warnings
-from datetime import datetime
 
 warnings.filterwarnings('ignore', category=UserWarning)
 
+
+def load_car_profile(profile_name):
+    config_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        'config', 'cars', f'{profile_name}.json'
+    )
+    if not os.path.exists(config_path):
+        return None
+    with open(config_path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
 def main():
-    print("--- Starting Model Training ---")
+    parser = argparse.ArgumentParser(description='Finn.no model training pipeline')
+    parser.add_argument('--profile', default='nissan_leaf',
+                        help='Bilprofil fra config/cars/ (uten .json). Standard: nissan_leaf')
+    args = parser.parse_args()
+
+    car_profile = load_car_profile(args.profile)
+    if car_profile:
+        car_make  = car_profile['make']
+        car_model = car_profile['model']
+        model_filename = f"model_{args.profile}.pkl"
+        print(f"--- Training model for {car_make} {car_model} ---")
+    else:
+        car_make, car_model = None, None
+        model_filename = "leaf_model.pkl"
+        print("--- Starting Model Training (no profile, using all data) ---")
+
     data_path = "cleaned_data.csv"
-    
     if not os.path.exists(data_path):
         print(f"Error: {data_path} not found. Run 01_clean_data.py first.")
         return
-        
+
     df = pd.read_csv(data_path)
-    print(f"Loaded {len(df)} rows for training.")
+    
+    # Filtrer på bilmodell hvis profil er spesifisert
+    if car_make and car_model and 'car_make' in df.columns:
+        before = len(df)
+        df = df[(df['car_make'] == car_make) & (df['car_model'] == car_model)]
+        print(f"Filtrert: {len(df)}/{before} rader for {car_make} {car_model}")
+    else:
+        print(f"Loaded {len(df)} rows for training (alle biler).")
     
     # Define our Features (X) and Target (y)
     current_year = datetime.now().year
@@ -220,14 +254,16 @@ def main():
     joblib.dump({
         'model': tuned_model,
         'model_name': best_model_name,
+        'car_make': car_make,
+        'car_model': car_model,
         'feature_cols': feature_cols,
         'numeric_features': numeric_features,
         'trim_cols': trim_cols,
         'region_cols': region_cols,
         'cv_results': cv_results,
         'best_params': search.best_params_,
-    }, model_path)
-    print(f"\nModel saved: {best_model_name} (tunet) -> {model_path}")
+    }, model_filename)
+    print(f"\nModel saved: {best_model_name} (tunet) -> {model_filename}")
 
 if __name__ == "__main__":
     main()
