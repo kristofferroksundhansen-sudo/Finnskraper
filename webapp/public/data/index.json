@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-03-03T21:22:04.808626",
+  "profiles": [
+    {
+      "profile": "nissan_leaf",
+      "label": "Nissan Leaf",
+      "count": 704
+    },
+    {
+      "profile": "tesla_model_3",
+      "label": "Tesla Model 3",
+      "count": 572
+    }
+  ]
+}
