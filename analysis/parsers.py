@@ -64,8 +64,8 @@ def parse_warranty(garanti_str):
         return 0
     return 1
 
-TRIM_PATTERNS = [
-    # Ordnet fra høyest/mest sjelden til lavest. Vi sjekker for disse.
+TRIM_PATTERNS_DEFAULT = [
+    # Nissan Leaf - ordert fra høyest til lavest variant
     (r'\be\+\b', 'e+'),
     (r'\bTekna\b', 'Tekna'),
     (r'\bN-Connecta\b', 'N-Connecta'),
@@ -73,13 +73,30 @@ TRIM_PATTERNS = [
     (r'\bVisia\b', 'Visia'),
 ]
 
-def parse_trim_level(title, subtitle=None, description=None):
-    """Ekstraher utstyrsnivå via hierarkisk regex search."""
+def parse_trim_level(title, subtitle=None, description=None, trim_config=None):
+    """Ekstraher utstyrsnivå via hierarkisk regex search.
     
+    Args:
+        title: Annonsens tittel
+        subtitle: Annonsens undertittel
+        description: Annonsens beskrivelsestekst
+        trim_config: Liste av dicts fra JSON-profil, f.eks.:
+                     [{"name": "Tekna", "patterns": ["\\bTekna\\b"]}, ...]
+                     Hvis None, brukes hardkodede Leaf-mønstre som fallback.
+    """
+    # Bygg mønstre fra konfig eller bruk default
+    if trim_config:
+        patterns = []
+        for trim_entry in trim_config:
+            for p in trim_entry.get('patterns', []):
+                patterns.append((p, trim_entry['name']))
+    else:
+        patterns = TRIM_PATTERNS_DEFAULT
+
     def find_trim(text):
         if not isinstance(text, str):
             return None
-        for pattern, trim in TRIM_PATTERNS:
+        for pattern, trim in patterns:
             if re.search(pattern, text, re.IGNORECASE):
                 return trim
         return None

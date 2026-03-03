@@ -1,0 +1,28 @@
+{
+    "make": "Tesla",
+    "model": "Model 3",
+    "apify_start_url": "https://www.finn.no/mobility/search/?make=0.8177&model=1.8177.8178",
+    "trims": [
+        {
+            "name": "Performance",
+            "patterns": [
+                "\\bPerformance\\b"
+            ]
+        },
+        {
+            "name": "Long Range",
+            "patterns": [
+                "\\bLong Range\\b",
+                "\\bLR\\b"
+            ]
+        },
+        {
+            "name": "Standard Range",
+            "patterns": [
+                "\\bStandard Range\\b",
+                "\\bSR\\+\\b",
+                "\\bSR\\b"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "make": "Nissan",
+    "model": "Leaf",
+    "apify_start_url": "https://www.finn.no/mobility/search/?make=0.796&model=1.796.2000216",
+    "trims": [
+        {
+            "name": "e+",
+            "patterns": [
+                "\\be\\+\\b"
+            ]
+        },
+        {
+            "name": "Tekna",
+            "patterns": [
+                "\\bTekna\\b"
+            ]
+        },
+        {
+            "name": "N-Connecta",
+            "patterns": [
+                "\\bN-Connecta\\b"
+            ]
+        },
+        {
+            "name": "Acenta",
+            "patterns": [
+                "\\bAcenta\\b"
+            ]
+        },
+        {
+            "name": "Visia",
+            "patterns": [
+                "\\bVisia\\b"
+            ]
+        }
+    ]
+}

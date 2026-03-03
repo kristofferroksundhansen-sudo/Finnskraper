@@ -1,6 +1,6 @@
 import json
 import os
-import glob
+import argparse
 import pandas as pd
 import re
 from datetime import datetime
@@ -13,6 +13,22 @@ from parsers import (
 )
 
 load_dotenv()
+
+
+def load_car_profile(profile_name):
+    """Laster en bilprofil fra config/cars/<profile>.json.
+    Returnerer en dict, eller None med Leaf-defaults som fallback."""
+    config_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        'config', 'cars', f'{profile_name}.json'
+    )
+    if not os.path.exists(config_path):
+        print(f"ADVARSEL: Fant ikke profil '{profile_name}' i {config_path}. Bruker Leaf-defaults.")
+        return None
+    with open(config_path, 'r', encoding='utf-8') as f:
+        profile = json.load(f)
+    print(f"Lastet bilprofil: {profile['make']} {profile['model']}")
+    return profile
 
 
 def load_data_from_apify():
@@ -33,8 +49,12 @@ def load_data_from_apify():
         print(f"Error fetching data from API: {e}")
         return []
 
-def clean_dataframe(df):
-    """Rens en DataFrame med rå annonsedata og returner rensede rader."""
+def clean_dataframe(df, car_profile=None):
+    """Rens en DataFrame med rå annonsedata og returner rensede rader.
+    Args:
+        df: Rådata fra Apify
+        car_profile: Dict fra JSON-profil (valgfri). Brukes til trim-deteksjon.
+    """
     total_before = len(df)
 
     # Apply parsers
@@ -72,12 +92,23 @@ def clean_dataframe(df):
     else:
         df['has_condition_issue'] = 0
 
-    # --- Fase 1.1: Parse utstyrsnivå (Trim) fra tittel, subtitle, og brødtekst ---
+    # --- Fase 1.1: Bilmerke og modell fra spesifikasjoner (automatisk) ---
+    df['car_make']  = df.get('spec_Merke',  pd.Series(['Ukjent'] * len(df))).fillna('Ukjent')
+    df['car_model'] = df.get('spec_Modell', pd.Series(['Ukjent'] * len(df))).fillna('Ukjent')
+    
+    # Fallback: Bruk profilen hvis spec-feltene mangler (eldre skrap)
+    if car_profile:
+        df['car_make']  = df['car_make'].replace('Ukjent', car_profile.get('make', 'Ukjent'))
+        df['car_model'] = df['car_model'].replace('Ukjent', car_profile.get('model', 'Ukjent'))
+
+    # --- Fase 1.2: Parse utstyrsnivå (Trim) fra tittel, subtitle, og brødtekst ---
+    trim_config = car_profile.get('trims') if car_profile else None
     df['trim_level'] = df.apply(
         lambda row: parse_trim_level(
             row.get('title', ''), 
             row.get('subtitle', ''), 
-            row.get('description', '')
+            row.get('description', ''),
+            trim_config=trim_config
         ), 
         axis=1
     )
@@ -172,6 +203,12 @@ def clean_dataframe(df):
 
 
 def main():
+    parser = argparse.ArgumentParser(description='Finn.no data cleaning pipeline')
+    parser.add_argument('--profile', default='nissan_leaf',
+                        help='Bilprofil fra config/cars/ (uten .json). Standard: nissan_leaf')
+    args = parser.parse_args()
+
+    car_profile = load_car_profile(args.profile)
     print("--- Starting Data Cleaning ---")
 
     # Read newly formatted data directly from the API
@@ -218,17 +255,17 @@ def main():
 
     # Rens de nye annonsene
     if not df_new.empty:
-        df_new = clean_dataframe(df_new)
+        df_new = clean_dataframe(df_new, car_profile=car_profile)
         today_str = datetime.now().strftime('%Y-%m-%d')
         df_new['first_seen_date'] = today_str
         df_new['last_seen_date'] = today_str
 
         # Velg kolonner for historisk lagring
         hist_cols = ['finn_id', 'title', 'url', 'location', 'city', 'dealer_name',
-                     'is_dealer', 'region', 'price_cleaned', 'year_cleaned',
-                     'mileage_cleaned', 'battery_capacity_cleaned', 'effect_cleaned',
-                     'range_km_cleaned', 'months_to_eu_cleaned', 'owners_cleaned',
-                     'has_condition_issue', 'has_warranty',
+                     'is_dealer', 'region', 'car_make', 'car_model', 'price_cleaned',
+                     'year_cleaned', 'mileage_cleaned', 'battery_capacity_cleaned',
+                     'effect_cleaned', 'range_km_cleaned', 'months_to_eu_cleaned',
+                     'owners_cleaned', 'has_condition_issue', 'has_warranty',
                      'trim_level', 'first_seen_date', 'last_seen_date', 'status', 'is_sold_flag']
         hist_cols = [c for c in hist_cols if c in df_new.columns]
         
