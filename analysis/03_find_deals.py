@@ -53,6 +53,13 @@ def main():
         df = df[df['status'] == 'Aktiv']
         print(f"Kun aktive annonser: {len(df)} rader.")
 
+    # Filtrer ut leasing og B2B-auksjon (priser < 50 000 kr er typisk ikke reelle forbrukerkjøp)
+    MIN_PRICE = 50_000
+    before_filter = len(df)
+    df = df[df['price_cleaned'] >= MIN_PRICE]
+    if before_filter - len(df) > 0:
+        print(f"Filtrert ut {before_filter - len(df)} annonser under {MIN_PRICE:,} kr (leasing/auksjon).")
+
     saved = joblib.load(model_path)
     if not isinstance(saved, dict):
         print("Error: Utdatert modellformat. Kjør 02_train_model.py på nytt.")

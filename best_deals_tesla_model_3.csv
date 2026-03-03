@@ -1,6 +1,4 @@
 title,car_make,car_model,year_cleaned,mileage_cleaned,range_km_cleaned,months_to_eu_cleaned,owners_cleaned,has_condition_issue,has_warranty,trim_level,region,is_dealer,dealer_name,days_listed,status,price_cleaned,predicted_value,value_difference,url
-Tesla Model 3,Tesla,Model 3,2025.0,20000.0,513.0,12.0,1.0,0.0,0.0,Ukjent,Oslo/Akershus,1.0,Bilma,0,Aktiv,11500.0,232905,221405,https://www.finn.no/mobility/item/441763918
-Tesla Model 3,Tesla,Model 3,2019.0,183000.0,530.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,Kingo Rides AS,0,Aktiv,13445.0,118134,104689,https://www.finn.no/mobility/item/420659925
 Tesla Model 3,Tesla,Model 3,2019.0,36471.0,530.0,22.33333333333333,2.0,0.0,0.0,Ukjent,Nord-Norge,0.0,,0,Aktiv,229532.0,298948,69416,https://www.finn.no/mobility/item/450430831
 Tesla Model 3,Tesla,Model 3,2026.0,4600.0,750.0,12.0,1.0,0.0,1.0,Ukjent,Rogaland,1.0,Kyvik Auto AS,0,Aktiv,419000.0,469395,50395,https://www.finn.no/mobility/item/450313241
 Tesla Model 3,Tesla,Model 3,2023.0,153750.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Auksjonen.No AS,0,Aktiv,237505.0,279481,41976,https://www.finn.no/mobility/item/452527337
@@ -87,8 +85,8 @@ Tesla Model 3,Tesla,Model 3,2019.0,91000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Ann
 Tesla Model 3,Tesla,Model 3,2021.0,40706.0,448.0,18.4,2.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,222532.0,236163,13631,https://www.finn.no/mobility/item/452450227
 Tesla Model 3,Tesla,Model 3,2019.0,106900.0,560.0,12.666666666666666,1.0,0.0,0.0,Long Range,Annet,1.0,Trygg Bilhus AS,0,Aktiv,198900.0,212501,13601,https://www.finn.no/mobility/item/451722933
 Tesla Model 3,Tesla,Model 3,2019.0,121000.0,560.0,9.533333333333331,2.0,0.0,0.0,Ukjent,Rogaland,0.0,,0,Aktiv,189000.0,202477,13477,https://www.finn.no/mobility/item/453056882
-Tesla Model 3,Tesla,Model 3,2019.0,89000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,212191,13209,https://www.finn.no/mobility/item/450806351
 Tesla Model 3,Tesla,Model 3,2019.0,89000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,212191,13209,https://www.finn.no/mobility/item/450804589
+Tesla Model 3,Tesla,Model 3,2019.0,89000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,212191,13209,https://www.finn.no/mobility/item/450806351
 Tesla Model 3,Tesla,Model 3,2019.0,106000.0,560.0,16.033333333333335,2.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,204532.0,217685,13153,https://www.finn.no/mobility/item/451108259
 Tesla Model 3,Tesla,Model 3,2019.0,65000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Jessheim Bilsenter,0,Aktiv,218982.0,232051,13069,https://www.finn.no/mobility/item/450521810
 Tesla Model 3,Tesla,Model 3,2019.0,65000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Oslo Bilsenter AS,0,Aktiv,219000.0,232051,13051,https://www.finn.no/mobility/item/452391684
