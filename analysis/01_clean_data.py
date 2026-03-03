@@ -6,58 +6,14 @@ import re
 from datetime import datetime
 from dotenv import load_dotenv
 from historical_db import extract_finn_id, load_historical_ids, append_new_data, load_all_data
+from parsers import (
+    parse_price, parse_mileage, parse_year, parse_battery, parse_effect,
+    parse_owners, parse_condition_flag, parse_range_km, parse_warranty,
+    parse_trim_level, parse_location
+)
 
 load_dotenv()
 
-def parse_price(price_str):
-    if not isinstance(price_str, str):
-        return None
-    # Remove all non-numeric characters (e.g. "199 900 kr" -> 199900)
-    num = re.sub(r'[^\d]', '', price_str)
-    return int(num) if num else None
-
-def parse_mileage(mileage_str):
-    if not isinstance(mileage_str, str):
-        return None
-    # Usually "146 800 km" or "146800km"
-    num = re.sub(r'[^\d]', '', mileage_str)
-    return int(num) if num else None
-
-def parse_year(year_str):
-    if not isinstance(year_str, str):
-        return None
-    num = re.sub(r'[^\d]', '', year_str)
-    return int(num) if num else None
-
-def parse_battery(battery_str):
-    if not isinstance(battery_str, str):
-        return None
-    num = re.sub(r'[^\d]', '', battery_str)
-    return int(num) if num else None
-
-def parse_effect(effect_str):
-    if not isinstance(effect_str, str):
-        return None
-    num = re.sub(r'[^\d]', '', effect_str)
-    return int(num) if num else None
-
-def parse_owners(owners_str):
-    """Parse 'Eiere' field, e.g. '1' or '2'."""
-    if not isinstance(owners_str, str):
-        return None
-    num = re.sub(r'[^\d]', '', owners_str)
-    return int(num) if num else None
-
-def parse_condition_flag(value_str):
-    """Returns 1 if a known defect is reported (Ja), 0 if not (Nei), None if unknown."""
-    if not isinstance(value_str, str):
-        return None
-    v = value_str.strip().lower()
-    if v in ('ja', 'yes'):
-        return 1
-    elif v in ('nei', 'no'):
-        return 0
-    return None
 
 def load_data_from_apify():
     import requests
@@ -79,6 +35,8 @@ def load_data_from_apify():
 
 def clean_dataframe(df):
     """Rens en DataFrame med rå annonsedata og returner rensede rader."""
+    total_before = len(df)
+
     # Apply parsers
     df['price_cleaned'] = df['price'].apply(parse_price)
     df['mileage_cleaned'] = df['mileage'].apply(parse_mileage)
@@ -114,20 +72,95 @@ def clean_dataframe(df):
     else:
         df['has_condition_issue'] = 0
 
+    # --- Fase 1.1: Parse utstyrsnivå (Trim) fra tittel, subtitle, og brødtekst ---
+    df['trim_level'] = df.apply(
+        lambda row: parse_trim_level(
+            row.get('title', ''), 
+            row.get('subtitle', ''), 
+            row.get('description', '')
+        ), 
+        axis=1
+    )
+
+    # --- Fase 1.2: Mapper lokasjon til region + forhandler-deteksjon ---
+    if 'location' in df.columns:
+        loc_parsed = df['location'].apply(parse_location)
+        df['city'] = loc_parsed.apply(lambda x: x[0])
+        df['dealer_name'] = loc_parsed.apply(lambda x: x[1])
+        df['is_dealer'] = loc_parsed.apply(lambda x: x[2])
+        df['region'] = loc_parsed.apply(lambda x: x[3])
+    else:
+        df['city'] = ''
+        df['dealer_name'] = ''
+        df['is_dealer'] = 0
+        df['region'] = 'Annet'
+
+    # --- Fase 3.1: Rekkevidde (WLTP) ---
+    range_col = [c for c in df.columns if 'Rekkevidde' in c and 'WLTP' in c]
+    if range_col:
+        df['range_km_cleaned'] = df[range_col[0]].apply(parse_range_km)
+    elif 'spec_Rekkevidde' in df.columns:
+        df['range_km_cleaned'] = df['spec_Rekkevidde'].apply(parse_range_km)
+    else:
+        df['range_km_cleaned'] = pd.NA
+
+    # --- Fase 3.3: Garanti-info ---
+    if 'spec_Garanti' in df.columns:
+        df['has_warranty'] = df['spec_Garanti'].apply(parse_warranty)
+    elif 'spec_Garantiens varighet' in df.columns:
+        df['has_warranty'] = df['spec_Garantiens varighet'].apply(parse_warranty)
+    else:
+        df['has_warranty'] = pd.NA
+
+    # --- Fase 1.4: Detaljert datatap-logging ---
+    missing_price = df['price_cleaned'].isna().sum()
+    missing_mileage = df['mileage_cleaned'].isna().sum()
+    missing_year = df['year_cleaned'].isna().sum()
+
     # Drop rows where essential info is missing
     df = df.dropna(subset=['price_cleaned', 'mileage_cleaned', 'year_cleaned'])
+    after_dropna = len(df)
 
-    # Impute missing values
-    battery_median = df['battery_capacity_cleaned'].median()
-    effect_median = df['effect_cleaned'].median()
-    owners_median = df['owners_cleaned'].median()
-    df['battery_capacity_cleaned'] = df['battery_capacity_cleaned'].fillna(battery_median if pd.notnull(battery_median) else 40)
-    df['effect_cleaned'] = df['effect_cleaned'].fillna(effect_median if pd.notnull(effect_median) else 109)
+    # Impute missing values dynamically via median
+    for col in ['battery_capacity_cleaned', 'effect_cleaned', 'owners_cleaned', 'range_km_cleaned']:
+        if col in df.columns:
+            median_val = df[col].median()
+            if pd.notnull(median_val):
+                df[col] = df[col].fillna(median_val)
+            else:
+                # Fallback only if the entire column is NaN, though realistically this shouldn't happen with valid data
+                df[col] = df[col].fillna(0)
+
+    # Fast assumption for specific columns
     df['months_to_eu_cleaned'] = df['months_to_eu_cleaned'].fillna(12.0)
-    df['owners_cleaned'] = df['owners_cleaned'].fillna(owners_median if pd.notnull(owners_median) else 2)
+    df['has_warranty'] = df['has_warranty'].fillna(0)
 
     # Filter outliers
+    before_outlier = len(df)
     df = df[(df['year_cleaned'] >= 2010) & (df['price_cleaned'] > 10000)]
+    outlier_removed = before_outlier - len(df)
+
+    # --- Logg datatap-sammendrag ---
+    total_dropped = total_before - len(df)
+    print(f"\n--- Datatap-analyse ({total_dropped}/{total_before} rader tapt, {total_dropped/total_before*100:.1f}%) ---")
+    print(f"  Mangler pris:      {missing_price}")
+    print(f"  Mangler km:        {missing_mileage}")
+    print(f"  Mangler årsmodell: {missing_year}")
+    print(f"  Dropna totalt:     {total_before - after_dropna}")
+    print(f"  Outlier-filter:    {outlier_removed} (year<2010 eller price<=10000)")
+    print(f"  Beholdt:           {len(df)} rader")
+
+    # --- Trim-fordeling ---
+    trim_counts = df['trim_level'].value_counts()
+    print(f"\n--- Trim-fordeling ---")
+    for trim, count in trim_counts.items():
+        print(f"  {trim}: {count}")
+
+    # --- Region-fordeling ---
+    region_counts = df['region'].value_counts()
+    print(f"\n--- Region-fordeling ---")
+    for region, count in region_counts.items():
+        print(f"  {region}: {count}")
 
     return df
 
@@ -183,10 +216,12 @@ def main():
         df_new['first_seen_date'] = datetime.now().strftime('%Y-%m-%d')
 
         # Velg kolonner for historisk lagring
-        hist_cols = ['finn_id', 'title', 'url', 'price_cleaned', 'year_cleaned',
+        hist_cols = ['finn_id', 'title', 'url', 'location', 'city', 'dealer_name',
+                     'is_dealer', 'region', 'price_cleaned', 'year_cleaned',
                      'mileage_cleaned', 'battery_capacity_cleaned', 'effect_cleaned',
-                     'months_to_eu_cleaned', 'owners_cleaned', 'has_condition_issue',
-                     'first_seen_date']
+                     'range_km_cleaned', 'months_to_eu_cleaned', 'owners_cleaned',
+                     'has_condition_issue', 'has_warranty',
+                     'trim_level', 'first_seen_date']
         hist_cols = [c for c in hist_cols if c in df_new.columns]
         added = append_new_data(df_new[hist_cols])
         print(f"La til {added} nye rader i historisk database.")

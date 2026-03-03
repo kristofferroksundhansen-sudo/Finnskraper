@@ -75,9 +75,17 @@ const detailCrawler = new CheerioCrawler({
             });
         }
 
+        // Scrape subtitle (often contains the trim like "40kWh Visia")
+        const subtitle = $('.panel.u-mt16 p, .t4, .u-mb16 p.u-mh16').first().text().trim();
+
+        // Scrape description (brødtekst - often contains statements like "Velutstyrt N-Connecta")
+        const description = $('.import-decoration').text().trim() || $('div[data-testid="ad-description"]').text().trim();
+
         await dataset.pushData({
             url: request.url,
             ...request.userData,
+            subtitle: subtitle,
+            description: description,
             specifications: { ...specs, ...conditionFlags }
         });
     },
