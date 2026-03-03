@@ -15,6 +15,7 @@ SCRIPTS = [
     ("02_train_model.py",  "Trener RandomForest-modellen"),
     ("03_find_deals.py",   "Finner de beste kuppene"),
     ("04_descriptive_stats.py", "Lager deskriptiv statistikk"),
+    ("05_visualize_data.py", "Genererer visuelle grafer (Pris/Alder/Trim/Kupp)"),
 ]
 
 def run_script(script, description):

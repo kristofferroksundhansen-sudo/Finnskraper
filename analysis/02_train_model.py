@@ -29,10 +29,17 @@ def main():
     current_year = datetime.now().year
     df['age'] = current_year - df['year_cleaned']
 
-    # --- Fase 3.2: Annonsealder ---
+    # --- Fase 3.2: Annonsealder (DOM - Days on Market) ---
     if 'first_seen_date' in df.columns:
         first_seen = pd.to_datetime(df['first_seen_date'], errors='coerce')
-        df['days_listed'] = (pd.Timestamp.now() - first_seen).dt.days
+        if 'last_seen_date' in df.columns:
+            last_seen = pd.to_datetime(df['last_seen_date'], errors='coerce')
+            # Fyll inn manglende last_seen med dagens dato
+            last_seen = last_seen.fillna(pd.Timestamp.now())
+        else:
+            last_seen = pd.Timestamp.now()
+            
+        df['days_listed'] = (last_seen - first_seen).dt.days
         df['days_listed'] = df['days_listed'].fillna(0).clip(lower=0)
     else:
         df['days_listed'] = 0

@@ -81,11 +81,16 @@ const detailCrawler = new CheerioCrawler({
         // Scrape description (brødtekst - often contains statements like "Velutstyrt N-Connecta")
         const description = $('.import-decoration').text().trim() || $('div[data-testid="ad-description"]').text().trim();
 
+        // Sjekk om annonsen er merket som SOLGT (se etter "SOLGT" badge i HTML)
+        const isSold = $('.bg-\\[--w-color-badge-warning-background\\]:contains("SOLGT")').length > 0 ||
+            $(':contains("SOLGT")').filter(function () { return $(this).text().trim() === 'SOLGT'; }).length > 0;
+
         await dataset.pushData({
             url: request.url,
             ...request.userData,
             subtitle: subtitle,
             description: description,
+            is_sold: isSold,
             specifications: { ...specs, ...conditionFlags }
         });
     },

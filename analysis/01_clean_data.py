@@ -5,7 +5,7 @@ import pandas as pd
 import re
 from datetime import datetime
 from dotenv import load_dotenv
-from historical_db import extract_finn_id, load_historical_ids, append_new_data, load_all_data
+from historical_db import extract_finn_id, load_historical_ids, update_or_append_data, load_all_data
 from parsers import (
     parse_price, parse_mileage, parse_year, parse_battery, parse_effect,
     parse_owners, parse_condition_flag, parse_range_km, parse_warranty,
@@ -111,6 +111,12 @@ def clean_dataframe(df):
         df['has_warranty'] = df['spec_Garantiens varighet'].apply(parse_warranty)
     else:
         df['has_warranty'] = pd.NA
+        
+    # --- Sjekk om solgt (fra Apify 'is_sold' feltet) ---
+    if 'is_sold' in df.columns:
+        df['is_sold_flag'] = df['is_sold'].fillna(False).astype(int)
+    else:
+        df['is_sold_flag'] = 0
 
     # --- Fase 1.4: Detaljert datatap-logging ---
     missing_price = df['price_cleaned'].isna().sum()
@@ -213,7 +219,9 @@ def main():
     # Rens de nye annonsene
     if not df_new.empty:
         df_new = clean_dataframe(df_new)
-        df_new['first_seen_date'] = datetime.now().strftime('%Y-%m-%d')
+        today_str = datetime.now().strftime('%Y-%m-%d')
+        df_new['first_seen_date'] = today_str
+        df_new['last_seen_date'] = today_str
 
         # Velg kolonner for historisk lagring
         hist_cols = ['finn_id', 'title', 'url', 'location', 'city', 'dealer_name',
@@ -221,12 +229,18 @@ def main():
                      'mileage_cleaned', 'battery_capacity_cleaned', 'effect_cleaned',
                      'range_km_cleaned', 'months_to_eu_cleaned', 'owners_cleaned',
                      'has_condition_issue', 'has_warranty',
-                     'trim_level', 'first_seen_date']
+                     'trim_level', 'first_seen_date', 'last_seen_date', 'status', 'is_sold_flag']
         hist_cols = [c for c in hist_cols if c in df_new.columns]
-        added = append_new_data(df_new[hist_cols])
-        print(f"La til {added} nye rader i historisk database.")
+        
+        # Også vi vil at de gamle som fortsatt finnes på Finn.no i dag, skal få oppdatert last_seen_date.
+        # Vi sender med et dataframe med alle idene som var i dagens batch.
+        to_update = pd.concat([df_new[hist_cols], df.loc[~new_mask, ['finn_id']]], ignore_index=True)
     else:
-        print("Ingen nye annonser å legge til.")
+        # Bare oppdater last_seen_date for eksisterende IDer i dagens batch hvis ingen nye finnes
+        to_update = df[['finn_id']].copy()
+        
+    added, updated = update_or_append_data(to_update)
+    print(f"La til {added} nye rader og oppdaterte {updated} eksisterende med ny last_seen_date.")
 
     # Last HELE historisk database for modelltrening
     df_all = load_all_data()
