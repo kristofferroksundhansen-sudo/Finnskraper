@@ -1,0 +1,575 @@
+title,car_make,car_model,year_cleaned,mileage_cleaned,range_km_cleaned,months_to_eu_cleaned,owners_cleaned,has_condition_issue,has_warranty,trim_level,region,is_dealer,dealer_name,days_listed,status,price_cleaned,predicted_value,value_difference,url
+Tesla Model 3,Tesla,Model 3,2025.0,20000.0,513.0,12.0,1.0,0.0,0.0,Ukjent,Oslo/Akershus,1.0,Bilma,0,Aktiv,11500.0,232905,221405,https://www.finn.no/mobility/item/441763918
+Tesla Model 3,Tesla,Model 3,2019.0,183000.0,530.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,Kingo Rides AS,0,Aktiv,13445.0,118134,104689,https://www.finn.no/mobility/item/420659925
+Tesla Model 3,Tesla,Model 3,2019.0,36471.0,530.0,22.33333333333333,2.0,0.0,0.0,Ukjent,Nord-Norge,0.0,,0,Aktiv,229532.0,298948,69416,https://www.finn.no/mobility/item/450430831
+Tesla Model 3,Tesla,Model 3,2026.0,4600.0,750.0,12.0,1.0,0.0,1.0,Ukjent,Rogaland,1.0,Kyvik Auto AS,0,Aktiv,419000.0,469395,50395,https://www.finn.no/mobility/item/450313241
+Tesla Model 3,Tesla,Model 3,2023.0,153750.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Auksjonen.No AS,0,Aktiv,237505.0,279481,41976,https://www.finn.no/mobility/item/452527337
+Tesla Model 3,Tesla,Model 3,2020.0,230115.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Vestfold/Telemark,1.0,Auksjonen.No AS,0,Aktiv,104532.0,141024,36492,https://www.finn.no/mobility/item/449368022
+Tesla Model 3,Tesla,Model 3,2021.0,92500.0,448.0,18.0,1.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,184532.0,218498,33966,https://www.finn.no/mobility/item/453126239
+Tesla Model 3,Tesla,Model 3,2020.0,52320.0,333.0,24.33333333333333,1.0,0.0,0.0,Ukjent,Vestland,1.0,Tesla Motors Norway AS,0,Aktiv,205500.0,237385,31885,https://www.finn.no/mobility/item/450733305
+Tesla Model 3,Tesla,Model 3,2021.0,71000.0,448.0,15.733333333333333,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,199800.0,230849,31049,https://www.finn.no/mobility/item/451509773
+Tesla Model 3,Tesla,Model 3,2019.0,121500.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Annet,1.0,AUTO LINK AS,0,Aktiv,169990.0,200041,30051,https://www.finn.no/mobility/item/409068519
+Tesla Model 3,Tesla,Model 3,2021.0,81500.0,580.0,12.8,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,239600.0,267747,28147,https://www.finn.no/mobility/item/450751185
+Tesla Model 3,Tesla,Model 3,2021.0,91000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil Salgshjelp,0,Aktiv,230000.0,257653,27653,https://www.finn.no/mobility/item/442508829
+Tesla Model 3,Tesla,Model 3,2020.0,88600.0,560.0,12.0,2.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,218900.0,245878,26978,https://www.finn.no/mobility/item/452517912
+Tesla Model 3,Tesla,Model 3,2021.0,95000.0,448.0,15.466666666666669,1.0,0.0,0.0,Standard Range,Annet,0.0,,0,Aktiv,188532.0,215454,26922,https://www.finn.no/mobility/item/453009300
+Tesla Model 3,Tesla,Model 3,2021.0,108500.0,567.0,15.2,3.0,0.0,0.0,Performance,Rogaland,0.0,,0,Aktiv,245000.0,271842,26842,https://www.finn.no/mobility/item/449220309
+Tesla Model 3,Tesla,Model 3,2021.0,127700.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Optimal Auto AS,0,Aktiv,245000.0,271790,26790,https://www.finn.no/mobility/item/453253757
+Tesla Model 3,Tesla,Model 3,2020.0,99000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,URBAN AUTO AS,0,Aktiv,219900.0,244888,24988,https://www.finn.no/mobility/item/447523980
+Tesla Model 3,Tesla,Model 3,2020.0,74000.0,409.0,12.0,1.0,0.0,1.0,Ukjent,Rogaland,1.0,SANDESTEEN BIL AS,0,Aktiv,197000.0,221874,24874,https://www.finn.no/mobility/item/453607645
+Tesla Model 3,Tesla,Model 3,2021.0,76000.0,448.0,20.266666666666666,2.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,198532.0,222968,24436,https://www.finn.no/mobility/item/327599117
+Tesla Model 3,Tesla,Model 3,2022.0,37840.0,602.0,25.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,323532.0,347400,23868,https://www.finn.no/mobility/item/451893247
+Tesla Model 3,Tesla,Model 3,2019.0,115000.0,560.0,12.0,1.0,0.0,0.0,Performance,Oslo/Akershus,1.0,FHM AUTOSPORT AS,0,Aktiv,199000.0,222757,23757,https://www.finn.no/mobility/item/416798956
+Tesla Model 3,Tesla,Model 3,2021.0,126500.0,614.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,FHM AUTOSPORT AS,0,Aktiv,219000.0,242201,23201,https://www.finn.no/mobility/item/449812266
+Tesla Model 3,Tesla,Model 3,2024.0,27000.0,528.0,28.0,2.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,459505.0,482677,23172,https://www.finn.no/mobility/item/449574127
+Tesla Model 3,Tesla,Model 3,2020.0,92235.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,AGDER BIL OG KAROSSERI AS,0,Aktiv,219900.0,242735,22835,https://www.finn.no/mobility/item/452864933
+Tesla Model 3,Tesla,Model 3,2019.0,150000.0,530.0,12.666666666666666,4.0,0.0,0.0,Performance,Vestland,0.0,,0,Aktiv,164999.0,187243,22244,https://www.finn.no/mobility/item/306872984
+Tesla Model 3,Tesla,Model 3,2020.0,63000.0,560.0,6.3,2.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,223532.0,245654,22122,https://www.finn.no/mobility/item/449236061
+Tesla Model 3,Tesla,Model 3,2022.0,132000.0,559.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,248982.0,271079,22097,https://www.finn.no/mobility/item/448440583
+Tesla Model 3,Tesla,Model 3,2021.0,79889.0,580.0,19.03333333333333,1.0,0.0,0.0,Ukjent,Østfold,0.0,,0,Aktiv,244532.0,266592,22060,https://www.finn.no/mobility/item/452962124
+Tesla Model 3,Tesla,Model 3,2024.0,10500.0,629.0,32.13333333333333,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,419505.0,441189,21684,https://www.finn.no/mobility/item/451568556
+Tesla Model 3,Tesla,Model 3,2021.0,87823.0,580.0,12.0,1.0,0.0,0.0,Long Range,Vestfold/Telemark,1.0,Auksjonen.No AS,0,Aktiv,204532.0,226179,21647,https://www.finn.no/mobility/item/444961669
+Tesla Model 3,Tesla,Model 3,2023.0,93000.0,547.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,DAYTONA BILSENTER AS,0,Aktiv,319900.0,341427,21527,https://www.finn.no/mobility/item/453110563
+Tesla Model 3,Tesla,Model 3,2020.0,76000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Romerike Autohus AS,0,Aktiv,238000.0,259215,21215,https://www.finn.no/mobility/item/450690665
+Tesla Model 3,Tesla,Model 3,2025.0,7500.0,660.0,43.06666666666667,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,427505.0,448501,20996,https://www.finn.no/mobility/item/446977680
+Tesla Model 3,Tesla,Model 3,2021.0,96000.0,640.0,12.0,1.0,0.0,1.0,Ukjent,Oslo/Akershus,1.0,Karisma Auto AS,0,Aktiv,248900.0,269859,20959,https://www.finn.no/mobility/item/453091451
+Tesla Model 3,Tesla,Model 3,2022.0,48800.0,491.0,12.0,1.0,0.0,1.0,Standard Range,Vestland,1.0,AutoSale AS,0,Aktiv,259900.0,280688,20788,https://www.finn.no/mobility/item/453463074
+Tesla Model 3,Tesla,Model 3,2019.0,141000.0,415.0,17.8,3.0,0.0,1.0,Ukjent,Annet,1.0,Torgersen Bil AS,0,Aktiv,139532.0,159834,20302,https://www.finn.no/mobility/item/453603489
+Tesla Model 3,Tesla,Model 3,2022.0,62700.0,602.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Kalbakken Bil AS,0,Aktiv,297600.0,317519,19919,https://www.finn.no/mobility/item/449272160
+Tesla Model 3,Tesla,Model 3,2021.0,55753.0,567.0,12.0,1.0,0.0,1.0,Performance,Sørlandet,1.0,Z-AUTO AS,0,Aktiv,289900.0,309584,19684,https://www.finn.no/mobility/item/452385207
+Tesla Model 3,Tesla,Model 3,2019.0,83000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,Motorama AS,0,Aktiv,195000.0,214509,19509,https://www.finn.no/mobility/item/452469099
+Tesla Model 3,Tesla,Model 3,2024.0,35000.0,510.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,Rebil Salgshjelp,0,Aktiv,319000.0,338330,19330,https://www.finn.no/mobility/item/451899879
+Tesla Model 3,Tesla,Model 3,2021.0,130000.0,567.0,12.0,1.0,0.0,0.0,Performance,Oslo/Akershus,0.0,,0,Aktiv,236868.0,255783,18915,https://www.finn.no/mobility/item/322367315
+Tesla Model 3,Tesla,Model 3,2025.0,17200.0,629.0,12.0,2.0,0.0,1.0,Long Range,Sørlandet,1.0,TG BIL & BÅT AS,0,Aktiv,419000.0,437753,18753,https://www.finn.no/mobility/item/452499432
+Tesla Model 3,Tesla,Model 3,2020.0,93000.0,409.0,12.0,3.0,0.0,0.0,Standard Range,Annet,1.0,AUTO LX AS,0,Aktiv,181000.0,199723,18723,https://www.finn.no/mobility/item/446176921
+Tesla Model 3,Tesla,Model 3,2020.0,104800.0,530.0,20.633333333333333,1.0,0.0,0.0,Performance,Annet,0.0,,0,Aktiv,229000.0,247615,18615,https://www.finn.no/mobility/item/451537751
+Tesla Model 3,Tesla,Model 3,2019.0,104228.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,Karmøy Auto AS,0,Aktiv,195000.0,213595,18595,https://www.finn.no/mobility/item/453583699
+Tesla Model 3,Tesla,Model 3,2023.0,53500.0,491.0,12.0,1.0,0.0,1.0,Ukjent,Trøndelag,1.0,BILGALLERIET AS,0,Aktiv,269990.0,288492,18502,https://www.finn.no/mobility/item/450734642
+Tesla Model 3,Tesla,Model 3,2021.0,79000.0,614.0,15.933333333333334,4.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,265000.0,283471,18471,https://www.finn.no/mobility/item/448254697
+Tesla Model 3,Tesla,Model 3,2021.0,93500.0,580.0,9.166666666666666,3.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,241434.0,259821,18387,https://www.finn.no/mobility/item/452906498
+Tesla Model 3,Tesla,Model 3,2021.0,72000.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Vestland,1.0,Car4Sale AS,0,Aktiv,215000.0,233349,18349,https://www.finn.no/mobility/item/451466522
+Tesla Model 3,Tesla,Model 3,2021.0,69900.0,448.0,13.533333333333331,1.0,0.0,1.0,Ukjent,Vestland,0.0,,0,Aktiv,213532.0,231564,18032,https://www.finn.no/mobility/item/452891342
+Tesla Model 3,Tesla,Model 3,2025.0,9300.0,660.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,AutoPoint AS,0,Aktiv,439000.0,456752,17752,https://www.finn.no/mobility/item/448499251
+Tesla Model 3,Tesla,Model 3,2023.0,28000.0,547.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Rebil,0,Aktiv,374900.0,391689,16789,https://www.finn.no/mobility/item/452511558
+Tesla Model 3,Tesla,Model 3,2024.0,26000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,KSL AUTO AS,0,Aktiv,399000.0,415785,16785,https://www.finn.no/mobility/item/451856111
+Tesla Model 3,Tesla,Model 3,2019.0,113453.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,Karmøy Auto AS,0,Aktiv,184900.0,201580,16680,https://www.finn.no/mobility/item/453582880
+Tesla Model 3,Tesla,Model 3,2021.0,47000.0,614.0,14.8,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,274532.0,291030,16498,https://www.finn.no/mobility/item/452163773
+Tesla Model 3,Tesla,Model 3,2022.0,83000.0,491.0,24.666666666666668,1.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,224532.0,240996,16464,https://www.finn.no/mobility/item/403509606
+Tesla Model 3,Tesla,Model 3,2022.0,78891.0,547.0,6.0,2.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,299532.0,315932,16400,https://www.finn.no/mobility/item/452381514
+Tesla Model 3,Tesla,Model 3,2019.0,132500.0,530.0,12.0,1.0,0.0,1.0,Performance,Vestland,1.0,Bergen Bilformidling AS,0,Aktiv,189000.0,205279,16279,https://www.finn.no/mobility/item/449776018
+Tesla Model 3,Tesla,Model 3,2021.0,43000.0,567.0,15.466666666666669,1.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,315000.0,331008,16008,https://www.finn.no/mobility/item/309346493
+Tesla Model 3,Tesla,Model 3,2023.0,33900.0,629.0,18.133333333333333,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,358999.0,374971,15972,https://www.finn.no/mobility/item/448257180
+Tesla Model 3,Tesla,Model 3,2021.0,100000.0,614.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,M.K AUTO AS,0,Aktiv,239532.0,255372,15840,https://www.finn.no/mobility/item/451053233
+Tesla Model 3,Tesla,Model 3,2024.0,34000.0,629.0,12.0,1.0,0.0,1.0,Ukjent,Østfold,1.0,Dahles Auto Råbekken,0,Aktiv,399000.0,414783,15783,https://www.finn.no/mobility/item/449477881
+Tesla Model 3,Tesla,Model 3,2020.0,52000.0,530.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,AUTO B AS,0,Aktiv,265000.0,280767,15767,https://www.finn.no/mobility/item/452665347
+Tesla Model 3,Tesla,Model 3,2023.0,48746.0,602.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,AVIBIL AS,0,Aktiv,329000.0,344746,15746,https://www.finn.no/mobility/item/452576223
+Tesla Model 3,Tesla,Model 3,2023.0,37700.0,602.0,12.933333333333334,1.0,0.0,1.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,367343.0,383056,15713,https://www.finn.no/mobility/item/436913265
+Tesla Model 3,Tesla,Model 3,2020.0,107600.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,198900.0,214401,15501,https://www.finn.no/mobility/item/452532784
+Tesla Model 3,Tesla,Model 3,2024.0,20000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTOFORM AS,0,Aktiv,399000.0,414491,15491,https://www.finn.no/mobility/item/452946512
+Tesla Model 3,Tesla,Model 3,2024.0,18500.0,629.0,29.766666666666666,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,399000.0,414485,15485,https://www.finn.no/mobility/item/421506487
+Tesla Model 3,Tesla,Model 3,2019.0,62821.0,560.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Mycar Billingstad,0,Aktiv,238900.0,254245,15345,https://www.finn.no/mobility/item/452404449
+Tesla Model 3,Tesla,Model 3,2019.0,111000.0,560.0,12.0,2.0,0.0,1.0,Long Range,Vestland,1.0,Car4Sale AS,0,Aktiv,189900.0,205228,15328,https://www.finn.no/mobility/item/452498597
+Tesla Model 3,Tesla,Model 3,2019.0,113000.0,560.0,-9.966666666666669,4.0,0.0,0.0,Long Range,Nord-Norge,0.0,,0,Aktiv,187305.0,202162,14857,https://www.finn.no/mobility/item/350823641
+Tesla Model 3,Tesla,Model 3,2022.0,43200.0,547.0,12.0,1.0,0.0,1.0,Performance,Vestland,1.0,AutoSale AS,0,Aktiv,339900.0,354734,14834,https://www.finn.no/mobility/item/446113652
+Tesla Model 3,Tesla,Model 3,2019.0,101000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Bilzentrum AS,0,Aktiv,198000.0,212742,14742,https://www.finn.no/mobility/item/453455373
+Tesla Model 3,Tesla,Model 3,2019.0,96000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,213664,14682,https://www.finn.no/mobility/item/450168735
+Tesla Model 3,Tesla,Model 3,2019.0,103000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,Holmane Bil AS,0,Aktiv,199000.0,213595,14595,https://www.finn.no/mobility/item/452638170
+Tesla Model 3,Tesla,Model 3,2019.0,78400.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,208900.0,223473,14573,https://www.finn.no/mobility/item/451490136
+Tesla Model 3,Tesla,Model 3,2021.0,74700.0,580.0,9.066666666666666,1.0,0.0,1.0,Long Range,Rogaland,1.0,AASTRAND AUTO AS,0,Aktiv,259000.0,273443,14443,https://www.finn.no/mobility/item/449745885
+Tesla Model 3,Tesla,Model 3,2019.0,145000.0,409.0,17.733333333333334,2.0,0.0,0.0,Ukjent,Vestland,0.0,,0,Aktiv,144434.0,158751,14317,https://www.finn.no/mobility/item/408858993
+Tesla Model 3,Tesla,Model 3,2019.0,75000.0,560.0,15.733333333333333,1.0,0.0,0.0,Long Range,Vestland,0.0,,0,Aktiv,224532.0,238726,14194,https://www.finn.no/mobility/item/451652735
+Tesla Model 3,Tesla,Model 3,2019.0,73000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Vestfold/Telemark,1.0,ELDORSEN AUTO AS,0,Aktiv,229900.0,244007,14107,https://www.finn.no/mobility/item/444989333
+Tesla Model 3,Tesla,Model 3,2024.0,14990.0,513.0,28.0,1.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,329900.0,343908,14008,https://www.finn.no/mobility/item/452358981
+Tesla Model 3,Tesla,Model 3,2019.0,100000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Bare Bil AS,0,Aktiv,199900.0,213838,13938,https://www.finn.no/mobility/item/451381713
+Tesla Model 3,Tesla,Model 3,2019.0,118000.0,560.0,12.0,1.0,0.0,1.0,Ukjent,Østfold,1.0,Dahles Auto Moss AS,0,Aktiv,164900.0,178759,13859,https://www.finn.no/mobility/item/449094105
+Tesla Model 3,Tesla,Model 3,2021.0,67000.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Berg Auto AS,0,Aktiv,289900.0,303637,13737,https://www.finn.no/mobility/item/452365398
+Tesla Model 3,Tesla,Model 3,2019.0,91000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,212618,13636,https://www.finn.no/mobility/item/450795566
+Tesla Model 3,Tesla,Model 3,2021.0,40706.0,448.0,18.4,2.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,222532.0,236163,13631,https://www.finn.no/mobility/item/452450227
+Tesla Model 3,Tesla,Model 3,2019.0,106900.0,560.0,12.666666666666666,1.0,0.0,0.0,Long Range,Annet,1.0,Trygg Bilhus AS,0,Aktiv,198900.0,212501,13601,https://www.finn.no/mobility/item/451722933
+Tesla Model 3,Tesla,Model 3,2019.0,121000.0,560.0,9.533333333333331,2.0,0.0,0.0,Ukjent,Rogaland,0.0,,0,Aktiv,189000.0,202477,13477,https://www.finn.no/mobility/item/453056882
+Tesla Model 3,Tesla,Model 3,2019.0,89000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,212191,13209,https://www.finn.no/mobility/item/450806351
+Tesla Model 3,Tesla,Model 3,2019.0,89000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,212191,13209,https://www.finn.no/mobility/item/450804589
+Tesla Model 3,Tesla,Model 3,2019.0,106000.0,560.0,16.033333333333335,2.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,204532.0,217685,13153,https://www.finn.no/mobility/item/451108259
+Tesla Model 3,Tesla,Model 3,2019.0,65000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Jessheim Bilsenter,0,Aktiv,218982.0,232051,13069,https://www.finn.no/mobility/item/450521810
+Tesla Model 3,Tesla,Model 3,2019.0,65000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Oslo Bilsenter AS,0,Aktiv,219000.0,232051,13051,https://www.finn.no/mobility/item/452391684
+Tesla Model 3,Tesla,Model 3,2024.0,26000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Car4Sale AS,0,Aktiv,399000.0,411716,12716,https://www.finn.no/mobility/item/449617986
+Tesla Model 3,Tesla,Model 3,2024.0,35700.0,629.0,29.83333333333333,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,397343.0,410056,12713,https://www.finn.no/mobility/item/436857650
+Tesla Model 3,Tesla,Model 3,2021.0,109900.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Østfold,1.0,Gretland Bil AS,0,Aktiv,198000.0,210652,12652,https://www.finn.no/mobility/item/451655559
+Tesla Model 3,Tesla,Model 3,2021.0,74800.0,448.0,15.8,1.0,0.0,1.0,Ukjent,Vestland,0.0,,0,Aktiv,220000.0,232577,12577,https://www.finn.no/mobility/item/450333053
+Tesla Model 3,Tesla,Model 3,2019.0,92800.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,199900.0,212377,12477,https://www.finn.no/mobility/item/451647281
+Tesla Model 3,Tesla,Model 3,2022.0,53000.0,491.0,12.0,1.0,0.0,1.0,Standard Range,Vestland,1.0,Car4Sale AS,0,Aktiv,259000.0,271389,12389,https://www.finn.no/mobility/item/434915772
+Tesla Model 3,Tesla,Model 3,2019.0,85000.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Annet,1.0,AASEN AUTO,0,Aktiv,199990.0,212379,12389,https://www.finn.no/mobility/item/448998298
+Tesla Model 3,Tesla,Model 3,2024.0,55000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,365000.0,377251,12251,https://www.finn.no/mobility/item/438949518
+Tesla Model 3,Tesla,Model 3,2024.0,18028.0,629.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Norges Auto AS,0,Aktiv,414900.0,427091,12191,https://www.finn.no/mobility/item/449797643
+Tesla Model 3,Tesla,Model 3,2019.0,65700.0,560.0,12.7,1.0,0.0,1.0,Performance,Vestland,1.0,Oddvar Bjelde & Co AS,0,Aktiv,238800.0,250953,12153,https://www.finn.no/mobility/item/451357552
+Tesla Model 3,Tesla,Model 3,2019.0,88200.0,530.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,A L Auto AS,0,Aktiv,199900.0,212029,12129,https://www.finn.no/mobility/item/450770320
+Tesla Model 3,Tesla,Model 3,2021.0,102000.0,580.0,12.0,1.0,0.0,1.0,Ukjent,Oslo/Akershus,1.0,Rebil,0,Aktiv,245000.0,257073,12073,https://www.finn.no/mobility/item/452680269
+Tesla Model 3,Tesla,Model 3,2021.0,77552.0,614.0,12.433333333333334,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,264532.0,276555,12023,https://www.finn.no/mobility/item/452572842
+Tesla Model 3,Tesla,Model 3,2023.0,56500.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,324900.0,336814,11914,https://www.finn.no/mobility/item/452839277
+Tesla Model 3,Tesla,Model 3,2024.0,27000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Vestland,1.0,Car4Sale AS,0,Aktiv,399000.0,410907,11907,https://www.finn.no/mobility/item/448338175
+Tesla Model 3,Tesla,Model 3,2021.0,42500.0,567.0,1.0333333333333334,1.0,0.0,1.0,Performance,Vestfold/Telemark,1.0,Mobile Auto Vestfold AS,0,Aktiv,319900.0,331802,11902,https://www.finn.no/mobility/item/453071784
+Tesla Model 3,Tesla,Model 3,2021.0,85000.0,614.0,18.966666666666665,4.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,254532.0,266306,11774,https://www.finn.no/mobility/item/452844103
+Tesla Model 3,Tesla,Model 3,2019.0,146592.0,560.0,15.966666666666669,1.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,164434.0,175967,11533,https://www.finn.no/mobility/item/444341307
+Tesla Model 3,Tesla,Model 3,2023.0,64200.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,319900.0,331373,11473,https://www.finn.no/mobility/item/452512243
+Tesla Model 3,Tesla,Model 3,2021.0,45000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,288900.0,300277,11377,https://www.finn.no/mobility/item/452530620
+Tesla Model 3,Tesla,Model 3,2024.0,27800.0,629.0,27.9,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,FURUSET CAR SENTER & PREMIUM BIL,0,Aktiv,399000.0,410305,11305,https://www.finn.no/mobility/item/453461032
+Tesla Model 3,Tesla,Model 3,2022.0,74000.0,602.0,12.0,1.0,0.0,1.0,Long Range,Vestland,1.0,AutoSwap AS,0,Aktiv,299800.0,311054,11254,https://www.finn.no/mobility/item/448573124
+Tesla Model 3,Tesla,Model 3,2019.0,124700.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Autosenter Lillesand AS,0,Aktiv,189000.0,200210,11210,https://www.finn.no/mobility/item/453424580
+Tesla Model 3,Tesla,Model 3,2022.0,66000.0,491.0,3.8333333333333335,1.0,0.0,0.0,Standard Range,Trøndelag,0.0,,0,Aktiv,244532.0,255566,11034,https://www.finn.no/mobility/item/451802402
+Tesla Model 3,Tesla,Model 3,2023.0,51000.0,491.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,Car4Sale AS,0,Aktiv,285000.0,295991,10991,https://www.finn.no/mobility/item/448813535
+Tesla Model 3,Tesla,Model 3,2020.0,67187.0,409.0,6.5,1.0,0.0,0.0,Standard Range,Vestland,0.0,,0,Aktiv,194532.0,205357,10825,https://www.finn.no/mobility/item/451269530
+Tesla Model 3,Tesla,Model 3,2024.0,25000.0,629.0,30.8,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,402505.0,413240,10735,https://www.finn.no/mobility/item/451694496
+Tesla Model 3,Tesla,Model 3,2021.0,87000.0,580.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,BimmerSalg,0,Aktiv,259000.0,269725,10725,https://www.finn.no/mobility/item/450939061
+Tesla Model 3,Tesla,Model 3,2019.0,99000.0,560.0,12.0,1.0,0.0,1.0,Performance,Østfold,1.0,Fredrikstad Bil AS,0,Aktiv,219900.0,230622,10722,https://www.finn.no/mobility/item/453447964
+Tesla Model 3,Tesla,Model 3,2021.0,37447.0,580.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Naka Autosport AS,0,Aktiv,319000.0,329578,10578,https://www.finn.no/mobility/item/450437099
+Tesla Model 3,Tesla,Model 3,2021.0,91800.0,448.0,12.0,1.0,0.0,1.0,Ukjent,Østfold,1.0,Bare Bil AS,0,Aktiv,209900.0,220457,10557,https://www.finn.no/mobility/item/450486718
+Tesla Model 3,Tesla,Model 3,2026.0,2018.0,660.0,45.23333333333333,1.0,0.0,1.0,Long Range,Vestland,0.0,,0,Aktiv,459905.0,470441,10536,https://www.finn.no/mobility/item/450490878
+Tesla Model 3,Tesla,Model 3,2021.0,67165.0,567.0,13.033333333333331,5.0,0.0,0.0,Performance,Trøndelag,0.0,,0,Aktiv,289532.0,300052,10520,https://www.finn.no/mobility/item/453419877
+Tesla Model 3,Tesla,Model 3,2021.0,84000.0,614.0,12.0,2.0,0.0,1.0,Performance,Trøndelag,1.0,Stjørdal Autosalg AS,0,Aktiv,269999.0,280433,10434,https://www.finn.no/mobility/item/452843042
+Tesla Model 3,Tesla,Model 3,2021.0,96000.0,614.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Car4Sale AS,0,Aktiv,249900.0,260276,10376,https://www.finn.no/mobility/item/452834809
+Tesla Model 3,Tesla,Model 3,2021.0,79800.0,448.0,15.7,1.0,0.0,1.0,Performance,Østfold,0.0,,0,Aktiv,214500.0,224811,10311,https://www.finn.no/mobility/item/247301579
+Tesla Model 3,Tesla,Model 3,2019.0,86000.0,560.0,3.966666666666667,4.0,0.0,0.0,Ukjent,Nord-Norge,0.0,,0,Aktiv,204532.0,214822,10290,https://www.finn.no/mobility/item/452829108
+Tesla Model 3,Tesla,Model 3,2024.0,24000.0,554.0,30.53333333333333,1.0,0.0,1.0,Ukjent,Trøndelag,0.0,,0,Aktiv,339990.0,350080,10090,https://www.finn.no/mobility/item/453410967
+Tesla Model 3,Tesla,Model 3,2019.0,134000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,AVETTI MOTOR AS,0,Aktiv,188000.0,198046,10046,https://www.finn.no/mobility/item/451602109
+Tesla Model 3,Tesla,Model 3,2024.0,23000.0,528.0,31.0,2.0,0.0,1.0,Performance,Vestland,0.0,,0,Aktiv,480000.0,490026,10026,https://www.finn.no/mobility/item/449027370
+Tesla Model 3,Tesla,Model 3,2020.0,163200.0,560.0,1.0333333333333334,2.0,0.0,0.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,154434.0,164380,9946,https://www.finn.no/mobility/item/416277915
+Tesla Model 3,Tesla,Model 3,2022.0,61400.0,491.0,25.2,1.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,249532.0,259246,9714,https://www.finn.no/mobility/item/452854097
+Tesla Model 3,Tesla,Model 3,2024.0,21000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil Salgshjelp,0,Aktiv,406505.0,416038,9533,https://www.finn.no/mobility/item/450935096
+Tesla Model 3,Tesla,Model 3,2022.0,59600.0,602.0,6.466666666666667,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,304532.0,314011,9479,https://www.finn.no/mobility/item/427660986
+Tesla Model 3,Tesla,Model 3,2022.0,17800.0,602.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,Dream Car,0,Aktiv,359999.0,369477,9478,https://www.finn.no/mobility/item/451495632
+Tesla Model 3,Tesla,Model 3,2021.0,65290.0,448.0,18.266666666666666,1.0,0.0,1.0,Standard Range,Vestland,0.0,,0,Aktiv,219532.0,228954,9422,https://www.finn.no/mobility/item/453024165
+Tesla Model 3,Tesla,Model 3,2021.0,91086.0,448.0,15.666666666666666,1.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,206434.0,215832,9398,https://www.finn.no/mobility/item/435807334
+Tesla Model 3,Tesla,Model 3,2024.0,23000.0,510.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,Rebil,0,Aktiv,328900.0,338296,9396,https://www.finn.no/mobility/item/452511330
+Tesla Model 3,Tesla,Model 3,2019.0,124000.0,560.0,18.33333333333333,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,190000.0,199390,9390,https://www.finn.no/mobility/item/450763498
+Tesla Model 3,Tesla,Model 3,2021.0,77500.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Vestland,1.0,Car4Sale AS,0,Aktiv,214900.0,224200,9300,https://www.finn.no/mobility/item/449385630
+Tesla Model 3,Tesla,Model 3,2019.0,84989.0,415.0,21.766666666666666,4.0,0.0,0.0,Standard Range,Oslo/Akershus,0.0,,0,Aktiv,164532.0,173682,9150,https://www.finn.no/mobility/item/447954687
+Tesla Model 3,Tesla,Model 3,2021.0,54000.0,614.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Car4Sale AS,0,Aktiv,285000.0,294065,9065,https://www.finn.no/mobility/item/450589122
+Tesla Model 3,Tesla,Model 3,2024.0,27500.0,513.0,26.6,2.0,0.0,1.0,Ukjent,Rogaland,0.0,,0,Aktiv,317505.0,326473,8968,https://www.finn.no/mobility/item/448428140
+Tesla Model 3,Tesla,Model 3,2022.0,23192.0,547.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,STJØRDAL AUTO,0,Aktiv,359990.0,368942,8952,https://www.finn.no/mobility/item/452680986
+Tesla Model 3,Tesla,Model 3,2024.0,17000.0,528.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,FIRST AUTO AS,0,Aktiv,476000.0,484941,8941,https://www.finn.no/mobility/item/453575513
+Tesla Model 3,Tesla,Model 3,2021.0,56243.0,556.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,259000.0,267898,8898,https://www.finn.no/mobility/item/309498170
+Tesla Model 3,Tesla,Model 3,2019.0,110000.0,530.0,12.0,1.0,0.0,0.0,Performance,Vestfold/Telemark,1.0,ELDORSEN AUTO AS,0,Aktiv,199900.0,208722,8822,https://www.finn.no/mobility/item/450672230
+Tesla Model 3,Tesla,Model 3,2020.0,104600.0,560.0,6.1,1.0,0.0,1.0,Ukjent,Oslo/Akershus,1.0,Møller Bil Outlet Alnabru,0,Aktiv,204000.0,212794,8794,https://www.finn.no/mobility/item/453310537
+Tesla Model 3,Tesla,Model 3,2025.0,5300.0,660.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO LINK AS,0,Aktiv,469990.0,478692,8702,https://www.finn.no/mobility/item/453517377
+Tesla Model 3,Tesla,Model 3,2024.0,40300.0,629.0,12.0,1.0,0.0,1.0,Long Range,Vestland,1.0,Sandven AS,0,Aktiv,394900.0,403524,8624,https://www.finn.no/mobility/item/453553884
+Tesla Model 3,Tesla,Model 3,2024.0,21000.0,629.0,32.53333333333333,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,406505.0,415123,8618,https://www.finn.no/mobility/item/420432490
+Tesla Model 3,Tesla,Model 3,2019.0,131200.0,560.0,13.833333333333334,1.0,0.0,0.0,Long Range,Rogaland,0.0,,0,Aktiv,189434.0,198035,8601,https://www.finn.no/mobility/item/436624108
+Tesla Model 3,Tesla,Model 3,2019.0,135000.0,560.0,12.3,2.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Selg AS,0,Aktiv,184000.0,192567,8567,https://www.finn.no/mobility/item/453028922
+Tesla Model 3,Tesla,Model 3,2023.0,47000.0,547.0,12.0,1.0,0.0,1.0,Performance,Østfold,1.0,Biltrio AS,0,Aktiv,359000.0,367439,8439,https://www.finn.no/mobility/item/451895648
+Tesla Model 3,Tesla,Model 3,2019.0,112000.0,560.0,12.4,3.0,0.0,0.0,Long Range,Sørlandet,0.0,,0,Aktiv,199532.0,207940,8408,https://www.finn.no/mobility/item/452281121
+Tesla Model 3,Tesla,Model 3,2019.0,114900.0,409.0,12.0,1.0,0.0,0.0,Standard Range,Oslo/Akershus,1.0,MAX AUTO AS,0,Aktiv,159900.0,168276,8376,https://www.finn.no/mobility/item/452778469
+Tesla Model 3,Tesla,Model 3,2019.0,130000.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Rogaland,1.0,Kyvik Auto AS,0,Aktiv,189000.0,197312,8312,https://www.finn.no/mobility/item/449836207
+Tesla Model 3,Tesla,Model 3,2020.0,78000.0,530.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,CARS INVEST AS,0,Aktiv,257900.0,266197,8297,https://www.finn.no/mobility/item/452727270
+Tesla Model 3,Tesla,Model 3,2020.0,66400.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Rogaland,0.0,,0,Aktiv,238999.0,247211,8212,https://www.finn.no/mobility/item/448169507
+Tesla Model 3,Tesla,Model 3,2019.0,159400.0,381.0,12.0,1.0,0.0,1.0,Ukjent,Vestfold/Telemark,1.0,Easy Bruktbil,0,Aktiv,139900.0,148097,8197,https://www.finn.no/mobility/item/450250106
+Tesla Model 3,Tesla,Model 3,2019.0,93000.0,409.0,12.0,1.0,0.0,0.0,Standard Range,Annet,1.0,ECOCAR AS,0,Aktiv,178000.0,186106,8106,https://www.finn.no/mobility/item/441458070
+Tesla Model 3,Tesla,Model 3,2019.0,139500.0,530.0,18.9,1.0,0.0,1.0,Performance,Sørlandet,1.0,JENSEN AUTO AS,0,Aktiv,185000.0,192974,7974,https://www.finn.no/mobility/item/401463128
+Tesla Model 3,Tesla,Model 3,2019.0,137450.0,560.0,15.533333333333331,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,184434.0,192347,7913,https://www.finn.no/mobility/item/413538279
+Tesla Model 3,Tesla,Model 3,2019.0,105600.0,560.0,12.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Romerike Autosalg AS,0,Aktiv,199532.0,207427,7895,https://www.finn.no/mobility/item/446258252
+Tesla Model 3,Tesla,Model 3,2019.0,90000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,206781,7799,https://www.finn.no/mobility/item/440864913
+Tesla Model 3,Tesla,Model 3,2019.0,131000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,Car4Sale AS,0,Aktiv,189900.0,197682,7782,https://www.finn.no/mobility/item/442382397
+Tesla Model 3,Tesla,Model 3,2019.0,108332.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,OSLO BIL AUTO AVD RÅHOLT,0,Aktiv,199800.0,207354,7554,https://www.finn.no/mobility/item/450926514
+Tesla Model 3,Tesla,Model 3,2020.0,69750.0,530.0,12.0,2.0,0.0,0.0,Performance,Annet,1.0,Rebil,0,Aktiv,244900.0,252390,7490,https://www.finn.no/mobility/item/449376298
+Tesla Model 3,Tesla,Model 3,2023.0,23800.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTOVIVA AS,0,Aktiv,379900.0,387146,7246,https://www.finn.no/mobility/item/451133928
+Tesla Model 3,Tesla,Model 3,2021.0,98115.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Hokksund Auto AS,0,Aktiv,279000.0,286194,7194,https://www.finn.no/mobility/item/452413065
+Tesla Model 3,Tesla,Model 3,2019.0,242000.0,560.0,12.0,1.0,0.0,1.0,Ukjent,Oslo/Akershus,1.0,AUTO BILSTRADA AS,0,Aktiv,139000.0,146154,7154,https://www.finn.no/mobility/item/452428107
+Tesla Model 3,Tesla,Model 3,2019.0,111000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,VOLDENE BIL 2.0 AS,0,Aktiv,199000.0,206013,7013,https://www.finn.no/mobility/item/448394880
+Tesla Model 3,Tesla,Model 3,2024.0,43000.0,629.0,31.0,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,377505.0,384499,6994,https://www.finn.no/mobility/item/448249118
+Tesla Model 3,Tesla,Model 3,2024.0,38000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,FIRST AUTO AS,0,Aktiv,399000.0,405952,6952,https://www.finn.no/mobility/item/452328489
+Tesla Model 3,Tesla,Model 3,2019.0,122000.0,530.0,12.0,2.0,0.0,0.0,Performance,Annet,1.0,BULIC AUTO,0,Aktiv,199900.0,206838,6938,https://www.finn.no/mobility/item/439055803
+Tesla Model 3,Tesla,Model 3,2022.0,48900.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Trøndelag,1.0,Trøndelag Bil AS,0,Aktiv,269900.0,276820,6920,https://www.finn.no/mobility/item/428590449
+Tesla Model 3,Tesla,Model 3,2021.0,110000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Vestland,1.0,Importservice Bil AS,0,Aktiv,239000.0,245791,6791,https://www.finn.no/mobility/item/447350042
+Tesla Model 3,Tesla,Model 3,2019.0,161000.0,560.0,12.0,1.0,0.0,1.0,Ukjent,Østfold,1.0,Hvaler Bruktbil AS,0,Aktiv,169900.0,176559,6659,https://www.finn.no/mobility/item/450464923
+Tesla Model 3,Tesla,Model 3,2020.0,55800.0,530.0,7.0,4.0,0.0,0.0,Performance,Annet,0.0,,0,Aktiv,259900.0,266552,6652,https://www.finn.no/mobility/item/447110301
+Tesla Model 3,Tesla,Model 3,2019.0,61282.0,409.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,Rebil Salgshjelp,0,Aktiv,190000.0,196650,6650,https://www.finn.no/mobility/item/450447691
+Tesla Model 3,Tesla,Model 3,2019.0,77000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,208982.0,215525,6543,https://www.finn.no/mobility/item/441213838
+Tesla Model 3,Tesla,Model 3,2019.0,87000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,205000.0,211536,6536,https://www.finn.no/mobility/item/448997123
+Tesla Model 3,Tesla,Model 3,2022.0,38600.0,602.0,12.0,2.0,0.0,1.0,Long Range,Rogaland,1.0,UNIBIL AS avd. Stavanger,0,Aktiv,349000.0,355372,6372,https://www.finn.no/mobility/item/452969467
+Tesla Model 3,Tesla,Model 3,2026.0,2700.0,660.0,45.5,1.0,0.0,1.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,456505.0,462817,6312,https://www.finn.no/mobility/item/445512812
+Tesla Model 3,Tesla,Model 3,2019.0,91500.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,KM Auto AS,0,Aktiv,199900.0,206175,6275,https://www.finn.no/mobility/item/453481184
+Tesla Model 3,Tesla,Model 3,2021.0,73500.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Rogaland,1.0,BIL-KOMPANIET HAUGESUND AS,0,Aktiv,229900.0,236170,6270,https://www.finn.no/mobility/item/452939061
+Tesla Model 3,Tesla,Model 3,2021.0,134962.0,580.0,21.666666666666668,1.0,0.0,0.0,Performance,Vestland,1.0,Devo Bil AS,0,Aktiv,229900.0,236162,6262,https://www.finn.no/mobility/item/451566902
+Tesla Model 3,Tesla,Model 3,2019.0,142000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Bilzentrum AS,0,Aktiv,184532.0,190781,6249,https://www.finn.no/mobility/item/450570039
+Tesla Model 3,Tesla,Model 3,2022.0,46075.0,602.0,5.933333333333334,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,314532.0,320779,6247,https://www.finn.no/mobility/item/448923635
+Tesla Model 3,Tesla,Model 3,2021.0,162000.0,580.0,11.8,2.0,0.0,0.0,Ukjent,Annet,1.0,"PEDERSEN SALG, SERVICE & UTLEIE",0,Aktiv,212434.0,218679,6245,https://www.finn.no/mobility/item/422828285
+Tesla Model 3,Tesla,Model 3,2019.0,111000.0,560.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,198982.0,205223,6241,https://www.finn.no/mobility/item/441360273
+Tesla Model 3,Tesla,Model 3,2022.0,73550.0,547.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,LUND BILSENTER AS,0,Aktiv,318000.0,324241,6241,https://www.finn.no/mobility/item/441604949
+Tesla Model 3,Tesla,Model 3,2019.0,159521.0,560.0,19.7,1.0,0.0,0.0,Long Range,Vestland,1.0,MEBIL- AS,0,Aktiv,168900.0,175085,6185,https://www.finn.no/mobility/item/414386761
+Tesla Model 3,Tesla,Model 3,2019.0,61000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,228982.0,235101,6119,https://www.finn.no/mobility/item/437331798
+Tesla Model 3,Tesla,Model 3,2024.0,29500.0,513.0,30.9,2.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,337505.0,343563,6058,https://www.finn.no/mobility/item/451855109
+Tesla Model 3,Tesla,Model 3,2024.0,25000.0,513.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,FIRST AUTO AS,0,Aktiv,329000.0,335035,6035,https://www.finn.no/mobility/item/452827417
+Tesla Model 3,Tesla,Model 3,2020.0,75500.0,530.0,12.0,1.0,0.0,0.0,Performance,Annet,1.0,Voldene Bil AS,0,Aktiv,259000.0,265008,6008,https://www.finn.no/mobility/item/448493795
+Tesla Model 3,Tesla,Model 3,2021.0,68000.0,448.0,17.766666666666666,3.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,224532.0,230517,5985,https://www.finn.no/mobility/item/451924396
+Tesla Model 3,Tesla,Model 3,2021.0,63279.0,448.0,20.966666666666665,1.0,0.0,1.0,Ukjent,Vestland,0.0,,0,Aktiv,224532.0,230462,5930,https://www.finn.no/mobility/item/448142174
+Tesla Model 3,Tesla,Model 3,2022.0,75500.0,559.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Carzone AS,0,Aktiv,309000.0,314919,5919,https://www.finn.no/mobility/item/446062830
+Tesla Model 3,Tesla,Model 3,2022.0,76808.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Future Cars AS,0,Aktiv,299900.0,305704,5804,https://www.finn.no/mobility/item/451073432
+Tesla Model 3,Tesla,Model 3,2020.0,72000.0,580.0,12.0,1.0,0.0,0.0,Long Range,Vestland,1.0,Digicarsale AS,0,Aktiv,259000.0,264778,5778,https://www.finn.no/mobility/item/452638468
+Tesla Model 3,Tesla,Model 3,2021.0,109800.0,448.0,15.0,2.0,0.0,0.0,Standard Range,Oslo/Akershus,0.0,,0,Aktiv,190000.0,195777,5777,https://www.finn.no/mobility/item/448818486
+Tesla Model 3,Tesla,Model 3,2021.0,57000.0,614.0,19.03333333333333,1.0,0.0,1.0,Ukjent,Vestfold/Telemark,0.0,,0,Aktiv,274532.0,280210,5678,https://www.finn.no/mobility/item/451064916
+Tesla Model 3,Tesla,Model 3,2019.0,88100.0,560.0,12.0,1.0,0.0,0.0,Long Range,Rogaland,1.0,Auksjonen.No AS,0,Aktiv,181434.0,187038,5604,https://www.finn.no/mobility/item/450743931
+Tesla Model 3,Tesla,Model 3,2021.0,44900.0,567.0,12.0,1.0,0.0,0.0,Ukjent,Oslo/Akershus,1.0,M.K AUTO AS,0,Aktiv,309532.0,315096,5564,https://www.finn.no/mobility/item/447397423
+Tesla Model 3,Tesla,Model 3,2019.0,74729.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Autotal Akershus AS,0,Aktiv,229900.0,235426,5526,https://www.finn.no/mobility/item/452648162
+Tesla Model 3,Tesla,Model 3,2019.0,130500.0,530.0,-1.2333333333333334,3.0,0.0,0.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,203305.0,208709,5404,https://www.finn.no/mobility/item/380120538
+Tesla Model 3,Tesla,Model 3,2021.0,52000.0,567.0,12.0,1.0,0.0,1.0,Performance,Trøndelag,1.0,Stjørdal Autosalg AS,0,Aktiv,310000.0,315294,5294,https://www.finn.no/mobility/item/451962764
+Tesla Model 3,Tesla,Model 3,2019.0,130000.0,560.0,12.0,1.0,0.0,0.0,Performance,Annet,1.0,HS AUTO AS,0,Aktiv,199000.0,204291,5291,https://www.finn.no/mobility/item/442090126
+Tesla Model 3,Tesla,Model 3,2024.0,29700.0,629.0,26.466666666666665,1.0,0.0,1.0,Long Range,Annet,1.0,SMERUD AUTO AS,0,Aktiv,407505.0,412774,5269,https://www.finn.no/mobility/item/453528909
+Tesla Model 3,Tesla,Model 3,2025.0,5764.0,660.0,45.16666666666666,1.0,0.0,1.0,Long Range,Trøndelag,0.0,,0,Aktiv,465401.0,470441,5040,https://www.finn.no/mobility/item/448270167
+Tesla Model 3,Tesla,Model 3,2020.0,68500.0,409.0,12.0,1.0,0.0,1.0,Standard Range,Østfold,1.0,Gretland Bil AS,0,Aktiv,205000.0,209943,4943,https://www.finn.no/mobility/item/450914328
+Tesla Model 3,Tesla,Model 3,2020.0,80000.0,560.0,22.2,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,AUTOLUX BILSENTER AS,0,Aktiv,215000.0,219832,4832,https://www.finn.no/mobility/item/452602277
+Tesla Model 3,Tesla,Model 3,2021.0,50391.0,614.0,20.566666666666663,1.0,0.0,1.0,Long Range,Rogaland,0.0,,0,Aktiv,284532.0,289351,4819,https://www.finn.no/mobility/item/453456141
+Tesla Model 3,Tesla,Model 3,2022.0,59990.0,622.0,3.7,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,309670.0,314407,4737,https://www.finn.no/mobility/item/280386195
+Tesla Model 3,Tesla,Model 3,2021.0,94382.0,448.0,19.2,1.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,214532.0,219225,4693,https://www.finn.no/mobility/item/451572020
+Tesla Model 3,Tesla,Model 3,2019.0,74600.0,530.0,12.0,1.0,0.0,1.0,Performance,Rogaland,1.0,Motorhead Auto AS,0,Aktiv,249000.0,253631,4631,https://www.finn.no/mobility/item/451795416
+Tesla Model 3,Tesla,Model 3,2021.0,36500.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Østfold,1.0,Ramberg Bil,0,Aktiv,269000.0,273580,4580,https://www.finn.no/mobility/item/427406968
+Tesla Model 3,Tesla,Model 3,2021.0,63500.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,ECOCAR AS,0,Aktiv,295598.0,300166,4568,https://www.finn.no/mobility/item/429762977
+Tesla Model 3,Tesla,Model 3,2022.0,72623.0,547.0,5.966666666666667,2.0,0.0,1.0,Ukjent,Vestland,0.0,,0,Aktiv,319532.0,324082,4550,https://www.finn.no/mobility/item/446134415
+Tesla Model 3,Tesla,Model 3,2019.0,128000.0,560.0,15.733333333333333,2.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,189532.0,194058,4526,https://www.finn.no/mobility/item/453002698
+Tesla Model 3,Tesla,Model 3,2022.0,69700.0,491.0,12.0,1.0,0.0,1.0,Standard Range,Oslo/Akershus,1.0,SELECT AUTO,0,Aktiv,254000.0,258507,4507,https://www.finn.no/mobility/item/440483754
+Tesla Model 3,Tesla,Model 3,2019.0,102100.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,ELBILHALLEN AS,0,Aktiv,209000.0,213426,4426,https://www.finn.no/mobility/item/449227815
+Tesla Model 3,Tesla,Model 3,2021.0,70660.0,448.0,12.0,2.0,0.0,1.0,Standard Range,Rogaland,1.0,BIL-KOMPANIET HAUGESUND AS,0,Aktiv,229900.0,234321,4421,https://www.finn.no/mobility/item/452791742
+Tesla Model 3,Tesla,Model 3,2019.0,98000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Bilzentrum AS,0,Aktiv,209532.0,213829,4297,https://www.finn.no/mobility/item/452972376
+Tesla Model 3,Tesla,Model 3,2026.0,3500.0,660.0,45.833333333333336,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,462505.0,466783,4278,https://www.finn.no/mobility/item/451520560
+Tesla Model 3,Tesla,Model 3,2020.0,52300.0,560.0,24.8,1.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,249900.0,254150,4250,https://www.finn.no/mobility/item/453137043
+Tesla Model 3,Tesla,Model 3,2024.0,27350.0,629.0,31.933333333333334,1.0,0.0,0.0,Long Range,Østfold,1.0,Autonord AS,0,Aktiv,399000.0,402910,3910,https://www.finn.no/mobility/item/448391196
+Tesla Model 3,Tesla,Model 3,2019.0,129500.0,560.0,12.0,1.0,0.0,0.0,Performance,Annet,1.0,Bil-Kompaniet AS,0,Aktiv,199900.0,203727,3827,https://www.finn.no/mobility/item/452439976
+Tesla Model 3,Tesla,Model 3,2021.0,132000.0,580.0,11.933333333333334,2.0,0.0,0.0,Ukjent,Trøndelag,0.0,,0,Aktiv,229000.0,232795,3795,https://www.finn.no/mobility/item/452351824
+Tesla Model 3,Tesla,Model 3,2021.0,96500.0,448.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,Nitteberg Bil AS,0,Aktiv,219000.0,222744,3744,https://www.finn.no/mobility/item/442029215
+Tesla Model 3,Tesla,Model 3,2023.0,82779.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Autoshop AS,0,Aktiv,324000.0,327698,3698,https://www.finn.no/mobility/item/452843372
+Tesla Model 3,Tesla,Model 3,2024.0,16000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,SWITCH BIL AS,0,Aktiv,429990.0,433677,3687,https://www.finn.no/mobility/item/452506948
+Tesla Model 3,Tesla,Model 3,2024.0,26500.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,"Otto Moe, Grong",0,Aktiv,409900.0,413519,3619,https://www.finn.no/mobility/item/452343877
+Tesla Model 3,Tesla,Model 3,2021.0,101525.0,614.0,21.433333333333334,3.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,259532.0,263098,3566,https://www.finn.no/mobility/item/449425866
+Tesla Model 3,Tesla,Model 3,2019.0,100396.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,UTVIK AUTOSALG AS,0,Aktiv,209900.0,213399,3499,https://www.finn.no/mobility/item/451497390
+Tesla Model 3,Tesla,Model 3,2020.0,81650.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,ELBILHALLEN AS,0,Aktiv,249000.0,252306,3306,https://www.finn.no/mobility/item/450599255
+Tesla Model 3,Tesla,Model 3,2019.0,34000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Vestfold/Telemark,1.0,Antonsen Auto,0,Aktiv,264532.0,267785,3253,https://www.finn.no/mobility/item/451345677
+Tesla Model 3,Tesla,Model 3,2021.0,47000.0,448.0,20.73333333333333,1.0,0.0,1.0,Ukjent,Sørlandet,0.0,,0,Aktiv,229434.0,232686,3252,https://www.finn.no/mobility/item/435355956
+Tesla Model 3,Tesla,Model 3,2019.0,94000.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Østfold,1.0,TRYGG BIL AS,0,Aktiv,209900.0,213051,3151,https://www.finn.no/mobility/item/448494118
+Tesla Model 3,Tesla,Model 3,2024.0,18000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Vestland,1.0,AutoSale AS,0,Aktiv,419900.0,423048,3148,https://www.finn.no/mobility/item/451899604
+Tesla Model 3,Tesla,Model 3,2024.0,13700.0,629.0,12.0,1.0,0.0,0.0,Long Range,Trøndelag,1.0,HOLLA AUTOSENTER AS,0,Aktiv,429000.0,432144,3144,https://www.finn.no/mobility/item/432007040
+Tesla Model 3,Tesla,Model 3,2019.0,129900.0,400.0,12.0,1.0,0.0,0.0,Standard Range,Annet,1.0,Digicarsale AS,0,Aktiv,169990.0,173015,3025,https://www.finn.no/mobility/item/448796276
+Tesla Model 3,Tesla,Model 3,2021.0,145000.0,580.0,12.666666666666666,2.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,215000.0,217969,2969,https://www.finn.no/mobility/item/453040942
+Tesla Model 3,Tesla,Model 3,2019.0,91000.0,560.0,12.0,1.0,0.0,1.0,Standard Range,Vestfold/Telemark,1.0,BILTORGET FLEET AS,0,Aktiv,179900.0,182804,2904,https://www.finn.no/mobility/item/449532533
+Tesla Model 3,Tesla,Model 3,2019.0,130500.0,560.0,12.6,2.0,0.0,0.0,Ukjent,Vestfold/Telemark,0.0,,0,Aktiv,189532.0,192416,2884,https://www.finn.no/mobility/item/452356075
+Tesla Model 3,Tesla,Model 3,2019.0,108000.0,560.0,13.3,5.0,0.0,0.0,Long Range,Vestland,0.0,,0,Aktiv,204532.0,207402,2870,https://www.finn.no/mobility/item/453187033
+Tesla Model 3,Tesla,Model 3,2019.0,129000.0,560.0,12.0,2.0,0.0,0.0,Long Range,Annet,1.0,AML AUTO AS,0,Aktiv,195000.0,197790,2790,https://www.finn.no/mobility/item/427496457
+Tesla Model 3,Tesla,Model 3,2021.0,82831.0,580.0,12.733333333333333,3.0,0.0,1.0,Long Range,Vestland,0.0,,0,Aktiv,264532.0,267310,2778,https://www.finn.no/mobility/item/453262523
+Tesla Model 3,Tesla,Model 3,2021.0,63000.0,614.0,19.066666666666663,2.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,279532.0,282107,2575,https://www.finn.no/mobility/item/453362134
+Tesla Model 3,Tesla,Model 3,2021.0,46500.0,614.0,21.7,1.0,0.0,0.0,Long Range,Trøndelag,0.0,,0,Aktiv,293532.0,296087,2555,https://www.finn.no/mobility/item/451487974
+Tesla Model 3,Tesla,Model 3,2022.0,68490.0,547.0,12.0,1.0,0.0,0.0,Performance,Vestland,1.0,BILN AS,0,Aktiv,319900.0,322450,2550,https://www.finn.no/mobility/item/452985733
+Tesla Model 3,Tesla,Model 3,2019.0,121500.0,560.0,15.8,3.0,0.0,0.0,Ukjent,Sørlandet,0.0,,0,Aktiv,194532.0,196999,2467,https://www.finn.no/mobility/item/449618867
+Tesla Model 3,Tesla,Model 3,2019.0,115266.0,560.0,12.933333333333334,2.0,0.0,0.0,Long Range,Trøndelag,0.0,,0,Aktiv,199932.0,202264,2332,https://www.finn.no/mobility/item/445107380
+Tesla Model 3,Tesla,Model 3,2024.0,35000.0,513.0,12.0,1.0,0.0,1.0,Standard Range,Vestland,1.0,Car4Sale AS,0,Aktiv,334900.0,337140,2240,https://www.finn.no/mobility/item/449308681
+Tesla Model 3,Tesla,Model 3,2020.0,113000.0,415.0,12.0,1.0,0.0,1.0,Standard Range,Vestland,1.0,Car4Sale AS,0,Aktiv,179990.0,182218,2228,https://www.finn.no/mobility/item/448174220
+Tesla Model 3,Tesla,Model 3,2021.0,45069.0,448.0,21.266666666666666,1.0,0.0,0.0,Ukjent,Rogaland,0.0,,0,Aktiv,233532.0,235757,2225,https://www.finn.no/mobility/item/453133681
+Tesla Model 3,Tesla,Model 3,2021.0,77200.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Oslo/Akershus,1.0,Auto Solution AS,0,Aktiv,218800.0,221020,2220,https://www.finn.no/mobility/item/452807612
+Tesla Model 3,Tesla,Model 3,2021.0,46991.0,448.0,19.9,3.0,0.0,1.0,Standard Range,Sørlandet,0.0,,0,Aktiv,229532.0,231727,2195,https://www.finn.no/mobility/item/450481166
+Tesla Model 3,Tesla,Model 3,2024.0,27000.0,534.0,27.866666666666667,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,336942.0,339090,2148,https://www.finn.no/mobility/item/453520177
+Tesla Model 3,Tesla,Model 3,2022.0,132000.0,559.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,258982.0,261123,2141,https://www.finn.no/mobility/item/447434509
+Tesla Model 3,Tesla,Model 3,2019.0,117000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Sandvika Bil AS,0,Aktiv,199000.0,201119,2119,https://www.finn.no/mobility/item/432196293
+Tesla Model 3,Tesla,Model 3,2024.0,39276.0,513.0,31.3,1.0,0.0,1.0,Ukjent,Vestland,0.0,,0,Aktiv,327505.0,329534,2029,https://www.finn.no/mobility/item/449888704
+Tesla Model 3,Tesla,Model 3,2021.0,52262.0,448.0,30.83333333333333,1.0,0.0,1.0,Ukjent,Rogaland,0.0,,0,Aktiv,243532.0,245548,2016,https://www.finn.no/mobility/item/451531734
+Tesla Model 3,Tesla,Model 3,2021.0,56700.0,614.0,21.066666666666663,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,280000.0,281985,1985,https://www.finn.no/mobility/item/452471716
+Tesla Model 3,Tesla,Model 3,2019.0,100200.0,560.0,22.73333333333333,1.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,214532.0,216435,1903,https://www.finn.no/mobility/item/453423147
+Tesla Model 3,Tesla,Model 3,2022.0,61300.0,614.0,12.0,2.0,0.0,1.0,Long Range,Vestfold/Telemark,1.0,RS Autosport AS,0,Aktiv,309900.0,311798,1898,https://www.finn.no/mobility/item/452844579
+Tesla Model 3,Tesla,Model 3,2020.0,75000.0,580.0,12.0,1.0,0.0,0.0,Long Range,Rogaland,1.0,FHM AUTOSPORT AS,0,Aktiv,259999.0,261890,1891,https://www.finn.no/mobility/item/412100725
+Tesla Model 3,Tesla,Model 3,2019.0,94000.0,530.0,12.0,1.0,0.0,0.0,Performance,Annet,1.0,Romerike Autohus AS,0,Aktiv,218000.0,219856,1856,https://www.finn.no/mobility/item/453536459
+Tesla Model 3,Tesla,Model 3,2019.0,58750.0,400.0,12.0,4.0,0.0,1.0,Ukjent,Vestfold/Telemark,1.0,KARS Nenset,0,Aktiv,199000.0,200851,1851,https://www.finn.no/mobility/item/452873492
+Tesla Model 3,Tesla,Model 3,2021.0,43034.0,448.0,12.0,1.0,0.0,1.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,237129.0,238961,1832,https://www.finn.no/mobility/item/354647341
+Tesla Model 3,Tesla,Model 3,2020.0,70000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Trøndelag,1.0,BILGALLERIET AS,0,Aktiv,259990.0,261686,1696,https://www.finn.no/mobility/item/453096298
+Tesla Model 3,Tesla,Model 3,2021.0,102000.0,448.0,12.0,1.0,0.0,0.0,Standard Range,Trøndelag,1.0,Stjørdal Bilhandel AS,0,Aktiv,219000.0,220595,1595,https://www.finn.no/mobility/item/448198126
+Tesla Model 3,Tesla,Model 3,2021.0,91500.0,614.0,12.0,1.0,0.0,1.0,Ukjent,Sørlandet,1.0,Autoform Kristiansand AS,0,Aktiv,269000.0,270570,1570,https://www.finn.no/mobility/item/451933584
+Tesla Model 3,Tesla,Model 3,2019.0,95000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Pro Bilsalg AS,0,Aktiv,209000.0,210329,1329,https://www.finn.no/mobility/item/432342863
+Tesla Model 3,Tesla,Model 3,2021.0,78000.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Oslo/Akershus,1.0,Car4Sale AS,0,Aktiv,214990.0,216257,1267,https://www.finn.no/mobility/item/452773357
+Tesla Model 3,Tesla,Model 3,2021.0,92000.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Rogaland,1.0,SANDNES BRUKTBIL AS,0,Aktiv,219000.0,220182,1182,https://www.finn.no/mobility/item/452355094
+Tesla Model 3,Tesla,Model 3,2020.0,68600.0,409.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,Rebil,0,Aktiv,198900.0,200041,1141,https://www.finn.no/mobility/item/446417071
+Tesla Model 3,Tesla,Model 3,2019.0,139100.0,530.0,12.0,1.0,0.0,1.0,Performance,Sørlandet,1.0,BP Bil AS,0,Aktiv,199999.0,201111,1112,https://www.finn.no/mobility/item/451674477
+Tesla Model 3,Tesla,Model 3,2025.0,11000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Oslo Bilsenter AS,0,Aktiv,448000.0,449099,1099,https://www.finn.no/mobility/item/451668581
+Tesla Model 3,Tesla,Model 3,2020.0,69000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Bilgarasjen Sarpsborg,0,Aktiv,259900.0,260969,1069,https://www.finn.no/mobility/item/453155018
+Tesla Model 3,Tesla,Model 3,2022.0,54560.0,602.0,22.633333333333333,1.0,0.0,1.0,Long Range,Vestland,1.0,ØKO BIL AS,0,Aktiv,319900.0,320926,1026,https://www.finn.no/mobility/item/446051118
+Tesla Model 3,Tesla,Model 3,2021.0,71500.0,614.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Car4Sale AS,0,Aktiv,279900.0,280859,959,https://www.finn.no/mobility/item/449810610
+Tesla Model 3,Tesla,Model 3,2020.0,40500.0,580.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,BRUKTBIL VEST AS,0,Aktiv,299900.0,300747,847,https://www.finn.no/mobility/item/441158381
+Tesla Model 3,Tesla,Model 3,2023.0,33070.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Bilsenteret Stryn AS på Rud i Bærum,0,Aktiv,379498.0,380288,790,https://www.finn.no/mobility/item/449807059
+Tesla Model 3,Tesla,Model 3,2021.0,84000.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,DAYTONA BILSENTER AS,0,Aktiv,219900.0,220686,786,https://www.finn.no/mobility/item/451930698
+Tesla Model 3,Tesla,Model 3,2020.0,104000.0,560.0,22.1,3.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,224532.0,225303,771,https://www.finn.no/mobility/item/450096568
+Tesla Model 3,Tesla,Model 3,2019.0,96990.0,410.0,12.0,1.0,0.0,1.0,Ukjent,Rogaland,1.0,Åkra Bil AS,0,Aktiv,199000.0,199767,767,https://www.finn.no/mobility/item/451709785
+Tesla Model 3,Tesla,Model 3,2021.0,142000.0,567.0,12.0,1.0,0.0,0.0,Performance,Annet,1.0,Kommisjonsbil AS,0,Aktiv,254990.0,255738,748,https://www.finn.no/mobility/item/452387470
+Tesla Model 3,Tesla,Model 3,2020.0,107300.0,560.0,1.1666666666666667,4.0,0.0,0.0,Long Range,Sørlandet,0.0,,0,Aktiv,214532.0,215112,580,https://www.finn.no/mobility/item/450668768
+Tesla Model 3,Tesla,Model 3,2024.0,16500.0,629.0,27.766666666666666,1.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,417505.0,418050,545,https://www.finn.no/mobility/item/446202653
+Tesla Model 3,Tesla,Model 3,2019.0,149000.0,530.0,12.0,2.0,0.0,0.0,Performance,Annet,0.0,,0,Aktiv,184999.0,185530,531,https://www.finn.no/mobility/item/425056462
+Tesla Model 3,Tesla,Model 3,2020.0,124500.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Hernes & Co,0,Aktiv,229990.0,230422,432,https://www.finn.no/mobility/item/442304278
+Tesla Model 3,Tesla,Model 3,2025.0,14597.0,660.0,35.43333333333333,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,432000.0,432170,170,https://www.finn.no/mobility/item/445566652
+Tesla Model 3,Tesla,Model 3,2024.0,15000.0,528.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Carzone AS,0,Aktiv,489000.0,489160,160,https://www.finn.no/mobility/item/452623030
+Tesla Model 3,Tesla,Model 3,2019.0,152800.0,560.0,18.3,2.0,0.0,1.0,Long Range,Rogaland,1.0,AASTRAND AUTO AS,0,Aktiv,189000.0,189069,69,https://www.finn.no/mobility/item/451242987
+Tesla Model 3,Tesla,Model 3,2024.0,41000.0,629.0,29.3,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,400000.0,400027,27,https://www.finn.no/mobility/item/448145514
+Tesla Model 3,Tesla,Model 3,2019.0,98660.0,560.0,19.2,2.0,0.0,0.0,Ukjent,Vestfold/Telemark,0.0,,0,Aktiv,209532.0,209544,12,https://www.finn.no/mobility/item/449531283
+Tesla Model 3,Tesla,Model 3,2021.0,19890.0,448.0,12.0,1.0,0.0,1.0,Ukjent,Rogaland,1.0,SANDESTEEN BIL AS,0,Aktiv,258000.0,257944,-56,https://www.finn.no/mobility/item/450576265
+Tesla Model 3,Tesla,Model 3,2023.0,48600.0,602.0,10.033333333333331,1.0,0.0,0.0,Long Range,Annet,1.0,Follo Bil & Deler AS,0,Aktiv,335000.0,334894,-106,https://www.finn.no/mobility/item/450718935
+Tesla Model 3,Tesla,Model 3,2020.0,39000.0,409.0,24.9,1.0,0.0,0.0,Standard Range,Annet,1.0,FIRST AUTO AS,0,Aktiv,233000.0,232884,-116,https://www.finn.no/mobility/item/453541884
+Tesla Model 3,Tesla,Model 3,2024.0,30376.0,513.0,28.1,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,327500.0,327360,-140,https://www.finn.no/mobility/item/445598687
+Tesla Model 3,Tesla,Model 3,2021.0,157000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Sørlandet,1.0,Car4Sale AS,0,Aktiv,219000.0,218844,-156,https://www.finn.no/mobility/item/452578845
+Tesla Model 3,Tesla,Model 3,2022.0,81000.0,602.0,25.066666666666663,2.0,0.0,1.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,299999.0,299824,-175,https://www.finn.no/mobility/item/453201068
+Tesla Model 3,Tesla,Model 3,2021.0,67500.0,448.0,15.566666666666666,1.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,230000.0,229796,-204,https://www.finn.no/mobility/item/449519939
+Tesla Model 3,Tesla,Model 3,2026.0,150.0,520.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,Carzone AS,0,Aktiv,399000.0,398786,-214,https://www.finn.no/mobility/item/443683919
+Tesla Model 3,Tesla,Model 3,2025.0,19900.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO BRAVIA AS,0,Aktiv,419990.0,419760,-230,https://www.finn.no/mobility/item/452543097
+Tesla Model 3,Tesla,Model 3,2024.0,16800.0,528.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,Rebil Salgshjelp,0,Aktiv,479000.0,478750,-250,https://www.finn.no/mobility/item/451652359
+Tesla Model 3,Tesla,Model 3,2019.0,78000.0,560.0,12.0,1.0,0.0,1.0,Ukjent,Vestfold/Telemark,1.0,Motor Forum Notodden,0,Aktiv,219000.0,218664,-336,https://www.finn.no/mobility/item/452345942
+Tesla Model 3,Tesla,Model 3,2019.0,144500.0,560.0,14.333333333333334,2.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,189532.0,189177,-355,https://www.finn.no/mobility/item/453251472
+Tesla Model 3,Tesla,Model 3,2019.0,53286.0,560.0,12.0,1.0,0.0,1.0,Long Range,Vestfold/Telemark,1.0,Tintline Autocenter AS,0,Aktiv,249000.0,248609,-391,https://www.finn.no/mobility/item/449856091
+Tesla Model 3,Tesla,Model 3,2021.0,149000.0,580.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Romerike Autohus AS,0,Aktiv,215000.0,214556,-444,https://www.finn.no/mobility/item/447787261
+Tesla Model 3,Tesla,Model 3,2024.0,41000.0,629.0,20.633333333333333,1.0,0.0,1.0,Long Range,Annet,1.0,MB CONSULTING AS,0,Aktiv,399000.0,398524,-476,https://www.finn.no/mobility/item/447067444
+Tesla Model 3,Tesla,Model 3,2021.0,86000.0,448.0,19.133333333333333,1.0,0.0,0.0,Ukjent,Annet,1.0,Panther Auto AS,0,Aktiv,219990.0,219474,-516,https://www.finn.no/mobility/item/452508367
+Tesla Model 3,Tesla,Model 3,2021.0,72000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Dream Car,0,Aktiv,279000.0,278402,-598,https://www.finn.no/mobility/item/435369080
+Tesla Model 3,Tesla,Model 3,2024.0,27000.0,528.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,FIRST AUTO AS,0,Aktiv,477000.0,476245,-755,https://www.finn.no/mobility/item/451662483
+Tesla Model 3,Tesla,Model 3,2019.0,123376.0,560.0,17.6,4.0,0.0,0.0,Performance,Annet,0.0,,0,Aktiv,208434.0,207643,-791,https://www.finn.no/mobility/item/437769119
+Tesla Model 3,Tesla,Model 3,2023.0,42153.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Autolease Bilsalg,0,Aktiv,349000.0,348197,-803,https://www.finn.no/mobility/item/452679957
+Tesla Model 3,Tesla,Model 3,2022.0,23800.0,602.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Fredrikstad Bil AS,0,Aktiv,369900.0,369087,-813,https://www.finn.no/mobility/item/450861452
+Tesla Model 3,Tesla,Model 3,2021.0,75400.0,567.0,15.833333333333334,1.0,0.0,1.0,Performance,Vestfold/Telemark,0.0,,0,Aktiv,294532.0,293635,-897,https://www.finn.no/mobility/item/452599569
+Tesla Model 3,Tesla,Model 3,2021.0,55300.0,448.0,16.066666666666666,5.0,0.0,1.0,Standard Range,Vestland,1.0,PM Motor AS,0,Aktiv,235000.0,234092,-908,https://www.finn.no/mobility/item/451801925
+Tesla Model 3,Tesla,Model 3,2020.0,78000.0,560.0,12.0,1.0,0.0,1.0,Standard Range,Rogaland,1.0,AUTOLAND ROGALAND AS,0,Aktiv,239000.0,237994,-1006,https://www.finn.no/mobility/item/449381909
+Tesla Model 3,Tesla,Model 3,2024.0,18700.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Autosalg Vest AS,0,Aktiv,419900.0,418841,-1059,https://www.finn.no/mobility/item/449918422
+Tesla Model 3,Tesla,Model 3,2019.0,85500.0,560.0,12.3,1.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,214350.0,213117,-1233,https://www.finn.no/mobility/item/444557422
+Tesla Model 3,Tesla,Model 3,2024.0,28233.0,513.0,28.1,1.0,0.0,1.0,Ukjent,Rogaland,0.0,,0,Aktiv,329505.0,328213,-1292,https://www.finn.no/mobility/item/452097025
+Tesla Model 3,Tesla,Model 3,2022.0,92042.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO SELECT AS,0,Aktiv,284990.0,283606,-1384,https://www.finn.no/mobility/item/443279956
+Tesla Model 3,Tesla,Model 3,2025.0,19036.0,513.0,33.833333333333336,1.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,332343.0,330907,-1436,https://www.finn.no/mobility/item/433403098
+Tesla Model 3,Tesla,Model 3,2019.0,135600.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,ELBILHALLEN AS,0,Aktiv,199000.0,197513,-1487,https://www.finn.no/mobility/item/449208987
+Tesla Model 3,Tesla,Model 3,2022.0,57500.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,SWITCH BIL AS,0,Aktiv,319990.0,318472,-1518,https://www.finn.no/mobility/item/452794080
+Tesla Model 3,Tesla,Model 3,2023.0,36000.0,547.0,13.066666666666666,2.0,0.0,1.0,Performance,Rogaland,1.0,CHANGING AS,0,Aktiv,399000.0,397398,-1602,https://www.finn.no/mobility/item/441391736
+Tesla Model 3,Tesla,Model 3,2023.0,65555.0,547.0,14.833333333333334,1.0,0.0,1.0,Performance,Vestfold/Telemark,0.0,,0,Aktiv,359000.0,357380,-1620,https://www.finn.no/mobility/item/409958537
+Tesla Model 3,Tesla,Model 3,2020.0,76800.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,KM Auto AS,0,Aktiv,229900.0,228173,-1727,https://www.finn.no/mobility/item/453481284
+Tesla Model 3,Tesla,Model 3,2021.0,69915.0,580.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO SELECT AS,0,Aktiv,279990.0,278168,-1822,https://www.finn.no/mobility/item/451691795
+Tesla Model 3,Tesla,Model 3,2019.0,94000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Vestland,1.0,Bjørnestad Bilformidling,0,Aktiv,214900.0,212974,-1926,https://www.finn.no/mobility/item/441943925
+Tesla Model 3,Tesla,Model 3,2020.0,124000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,NORSKAUTO AS,0,Aktiv,209800.0,207714,-2086,https://www.finn.no/mobility/item/437199899
+Tesla Model 3,Tesla,Model 3,2025.0,27400.0,660.0,40.16666666666666,1.0,0.0,1.0,Long Range,Østfold,0.0,,0,Aktiv,428505.0,426397,-2108,https://www.finn.no/mobility/item/453093793
+Tesla Model 3,Tesla,Model 3,2021.0,89000.0,580.0,12.0,2.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,244305.0,242172,-2133,https://www.finn.no/mobility/item/384157276
+Tesla Model 3,Tesla,Model 3,2024.0,26000.0,513.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,Rebil,0,Aktiv,338900.0,336689,-2211,https://www.finn.no/mobility/item/436556538
+Tesla Model 3,Tesla,Model 3,2019.0,142000.0,409.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,GARDERMOEN AUTOPARTNER AS,0,Aktiv,169000.0,166754,-2246,https://www.finn.no/mobility/item/439247222
+Tesla Model 3,Tesla,Model 3,2025.0,12117.0,750.0,39.63333333333333,1.0,0.0,1.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,397505.0,395224,-2281,https://www.finn.no/mobility/item/453263808
+Tesla Model 3,Tesla,Model 3,2023.0,51874.0,602.0,15.1,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,342505.0,340219,-2286,https://www.finn.no/mobility/item/333349726
+Tesla Model 3,Tesla,Model 3,2019.0,138000.0,560.0,16.166666666666668,4.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,179532.0,177237,-2295,https://www.finn.no/mobility/item/444786335
+Tesla Model 3,Tesla,Model 3,2019.0,134000.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Annet,1.0,FHM AUTOSPORT AS,0,Aktiv,199000.0,196672,-2328,https://www.finn.no/mobility/item/434555719
+Tesla Model 3,Tesla,Model 3,2019.0,41000.0,409.0,12.0,1.0,0.0,1.0,Standard Range,Rogaland,1.0,SANDNES BRUKTBIL AS,0,Aktiv,219000.0,216623,-2377,https://www.finn.no/mobility/item/437174705
+Tesla Model 3,Tesla,Model 3,2022.0,55250.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,309000.0,306601,-2399,https://www.finn.no/mobility/item/453466963
+Tesla Model 3,Tesla,Model 3,2021.0,96337.0,614.0,21.53333333333333,1.0,0.0,1.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,264532.0,262102,-2430,https://www.finn.no/mobility/item/450513989
+Tesla Model 3,Tesla,Model 3,2020.0,101000.0,560.0,9.6,4.0,0.0,0.0,Ukjent,Vestfold/Telemark,0.0,,0,Aktiv,219532.0,217018,-2514,https://www.finn.no/mobility/item/453233539
+Tesla Model 3,Tesla,Model 3,2022.0,51925.0,602.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,330000.0,327438,-2562,https://www.finn.no/mobility/item/400014404
+Tesla Model 3,Tesla,Model 3,2020.0,103000.0,530.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO VIKEN AS,0,Aktiv,229999.0,227426,-2573,https://www.finn.no/mobility/item/452802481
+Tesla Model 3,Tesla,Model 3,2021.0,58000.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Vestfold/Telemark,1.0,Rebil,0,Aktiv,224900.0,222302,-2598,https://www.finn.no/mobility/item/452659241
+Tesla Model 3,Tesla,Model 3,2021.0,102000.0,614.0,21.433333333333334,2.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,259532.0,256919,-2613,https://www.finn.no/mobility/item/449096068
+Tesla Model 3,Tesla,Model 3,2021.0,125205.0,580.0,10.566666666666666,1.0,0.0,1.0,Long Range,Rogaland,0.0,,0,Aktiv,224532.0,221911,-2621,https://www.finn.no/mobility/item/449654233
+Tesla Model 3,Tesla,Model 3,2019.0,103000.0,567.0,12.633333333333333,4.0,0.0,0.0,Performance,Vestland,0.0,,0,Aktiv,224147.0,221521,-2626,https://www.finn.no/mobility/item/309545334
+Tesla Model 3,Tesla,Model 3,2022.0,77850.0,547.0,6.166666666666667,1.0,0.0,1.0,Performance,Trøndelag,1.0,RSR AS,0,Aktiv,319000.0,316359,-2641,https://www.finn.no/mobility/item/450428285
+Tesla Model 3,Tesla,Model 3,2024.0,30000.0,513.0,21.566666666666663,1.0,0.0,1.0,Ukjent,Vestland,1.0,Mobile Drotningsvik,0,Aktiv,318900.0,316252,-2648,https://www.finn.no/mobility/item/453587135
+Tesla Model 3,Tesla,Model 3,2019.0,122000.0,450.0,12.666666666666666,2.0,0.0,0.0,Ukjent,Rogaland,0.0,,0,Aktiv,204434.0,201783,-2651,https://www.finn.no/mobility/item/442613001
+Tesla Model 3,Tesla,Model 3,2021.0,80300.0,448.0,20.3,3.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,224900.0,222213,-2687,https://www.finn.no/mobility/item/450197883
+Tesla Model 3,Tesla,Model 3,2021.0,49000.0,448.0,20.83333333333333,2.0,0.0,1.0,Standard Range,Rogaland,0.0,,0,Aktiv,234532.0,231819,-2713,https://www.finn.no/mobility/item/450668186
+Tesla Model 3,Tesla,Model 3,2019.0,62000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,AUTOHUSET SOGN AS,0,Aktiv,249000.0,246255,-2745,https://www.finn.no/mobility/item/451333176
+Tesla Model 3,Tesla,Model 3,2022.0,70841.0,602.0,0.7333333333333333,1.0,0.0,1.0,Ukjent,Oslo/Akershus,1.0,Birger N. Haug AS Lillestrøm,0,Aktiv,314900.0,312033,-2867,https://www.finn.no/mobility/item/452505370
+Tesla Model 3,Tesla,Model 3,2019.0,65373.0,530.0,17.866666666666667,1.0,0.0,0.0,Performance,Vestland,0.0,,0,Aktiv,255000.0,252064,-2936,https://www.finn.no/mobility/item/447881739
+Tesla Model 3,Tesla,Model 3,2025.0,15500.0,513.0,36.56666666666667,2.0,0.0,1.0,Ukjent,Østfold,1.0,Voltvogn AS,0,Aktiv,378000.0,375014,-2986,https://www.finn.no/mobility/item/441516215
+Tesla Model 3,Tesla,Model 3,2024.0,13800.0,629.0,29.53333333333333,1.0,0.0,1.0,Performance,Annet,1.0,A M Autosalg AS,0,Aktiv,434000.0,430986,-3014,https://www.finn.no/mobility/item/364459798
+Tesla Model 3,Tesla,Model 3,2019.0,39000.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Sørlandet,0.0,,0,Aktiv,254532.0,251492,-3040,https://www.finn.no/mobility/item/447204543
+Tesla Model 3,Tesla,Model 3,2021.0,89150.0,448.0,20.23333333333333,1.0,0.0,1.0,Standard Range,Oslo/Akershus,0.0,,0,Aktiv,214532.0,211472,-3060,https://www.finn.no/mobility/item/452458078
+Tesla Model 3,Tesla,Model 3,2024.0,34000.0,528.0,32.56666666666667,1.0,0.0,1.0,Performance,Annet,1.0,FIRST AUTO AS,0,Aktiv,489000.0,485567,-3433,https://www.finn.no/mobility/item/452899817
+Tesla Model 3,Tesla,Model 3,2021.0,58000.0,614.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO BRAVIA AS,0,Aktiv,289990.0,286418,-3572,https://www.finn.no/mobility/item/449561901
+Tesla Model 3,Tesla,Model 3,2020.0,224800.0,560.0,18.73333333333333,1.0,0.0,0.0,Long Range,Trøndelag,0.0,,0,Aktiv,144532.0,140917,-3615,https://www.finn.no/mobility/item/450994627
+Tesla Model 3,Tesla,Model 3,2019.0,62000.0,560.0,12.0,1.0,0.0,1.0,Performance,Rogaland,1.0,T.A Auto AS,0,Aktiv,259000.0,255375,-3625,https://www.finn.no/mobility/item/452660280
+Tesla Model 3,Tesla,Model 3,2019.0,95000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Pro Bilsalg AS,0,Aktiv,214000.0,210329,-3671,https://www.finn.no/mobility/item/433538628
+Tesla Model 3,Tesla,Model 3,2021.0,77800.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Annet,1.0,Rebil,0,Aktiv,218900.0,215194,-3706,https://www.finn.no/mobility/item/452772780
+Tesla Model 3,Tesla,Model 3,2025.0,9000.0,528.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,FIRST AUTO AS,0,Aktiv,499000.0,495157,-3843,https://www.finn.no/mobility/item/452030590
+Tesla Model 3,Tesla,Model 3,2023.0,49500.0,614.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO BRAVIA AS,0,Aktiv,349990.0,346133,-3857,https://www.finn.no/mobility/item/450426477
+Tesla Model 3,Tesla,Model 3,2026.0,7950.0,660.0,45.46666666666667,1.0,0.0,1.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,449000.0,445085,-3915,https://www.finn.no/mobility/item/452167827
+Tesla Model 3,Tesla,Model 3,2019.0,86508.0,530.0,12.0,2.0,0.0,1.0,Performance,Rogaland,1.0,UTVIK AUTOSALG AS,0,Aktiv,255000.0,251036,-3964,https://www.finn.no/mobility/item/450734587
+Tesla Model 3,Tesla,Model 3,2025.0,6000.0,513.0,33.233333333333334,1.0,0.0,1.0,Ukjent,Østfold,0.0,,0,Aktiv,370000.0,365880,-4120,https://www.finn.no/mobility/item/451866005
+Tesla Model 3,Tesla,Model 3,2022.0,76500.0,602.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Exotic Motors,0,Aktiv,315000.0,310678,-4322,https://www.finn.no/mobility/item/451420632
+Tesla Model 3,Tesla,Model 3,2023.0,46000.0,547.0,17.433333333333334,1.0,0.0,1.0,Performance,Rogaland,1.0,S.L.H AUTO AS,0,Aktiv,379000.0,374551,-4449,https://www.finn.no/mobility/item/448432850
+Tesla Model 3,Tesla,Model 3,2021.0,75000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,NORDSTRAND BIL,0,Aktiv,279000.0,274526,-4474,https://www.finn.no/mobility/item/413039614
+Tesla Model 3,Tesla,Model 3,2022.0,121000.0,491.0,0.2333333333333333,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,233532.0,229007,-4525,https://www.finn.no/mobility/item/452113039
+Tesla Model 3,Tesla,Model 3,2019.0,63000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,BROM CONSULTING AS,0,Aktiv,249900.0,245116,-4784,https://www.finn.no/mobility/item/451762012
+Tesla Model 3,Tesla,Model 3,2021.0,122100.0,580.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,228900.0,224111,-4789,https://www.finn.no/mobility/item/450477845
+Tesla Model 3,Tesla,Model 3,2023.0,45000.0,614.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Rebil,0,Aktiv,359900.0,355107,-4793,https://www.finn.no/mobility/item/442953382
+Tesla Model 3,Tesla,Model 3,2022.0,99500.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO BRAVIA AS,0,Aktiv,289990.0,285110,-4880,https://www.finn.no/mobility/item/450425046
+Tesla Model 3,Tesla,Model 3,2024.0,15750.0,513.0,28.1,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,349505.0,344542,-4963,https://www.finn.no/mobility/item/450660819
+Tesla Model 3,Tesla,Model 3,2024.0,17781.0,513.0,27.933333333333334,1.0,0.0,1.0,Ukjent,Vestfold/Telemark,0.0,,0,Aktiv,347505.0,342412,-5093,https://www.finn.no/mobility/item/449848193
+Tesla Model 3,Tesla,Model 3,2021.0,112000.0,580.0,9.433333333333334,2.0,0.0,0.0,Long Range,Rogaland,0.0,,0,Aktiv,229434.0,224239,-5195,https://www.finn.no/mobility/item/425245484
+Tesla Model 3,Tesla,Model 3,2022.0,89900.0,602.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,Nitteberg Bil AS,0,Aktiv,299000.0,293736,-5264,https://www.finn.no/mobility/item/449908425
+Tesla Model 3,Tesla,Model 3,2020.0,52913.0,560.0,6.1,1.0,0.0,0.0,Ukjent,Vestland,1.0,Tesla Motors Norway AS,0,Aktiv,256100.0,250811,-5289,https://www.finn.no/mobility/item/451529862
+Tesla Model 3,Tesla,Model 3,2020.0,96000.0,530.0,12.0,1.0,0.0,0.0,Performance,Vestfold/Telemark,1.0,LY AUTO AS,0,Aktiv,249990.0,244572,-5418,https://www.finn.no/mobility/item/449135978
+Tesla Model 3,Tesla,Model 3,2019.0,82000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,ELBILHALLEN AS,0,Aktiv,229000.0,223478,-5522,https://www.finn.no/mobility/item/449199861
+Tesla Model 3,Tesla,Model 3,2021.0,82000.0,614.0,12.0,1.0,0.0,1.0,Ukjent,Trøndelag,1.0,HOLLA AUTOSENTER AS,0,Aktiv,285000.0,279417,-5583,https://www.finn.no/mobility/item/448689684
+Tesla Model 3,Tesla,Model 3,2023.0,46574.0,602.0,9.5,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,349000.0,343353,-5647,https://www.finn.no/mobility/item/449296615
+Tesla Model 3,Tesla,Model 3,2019.0,63000.0,530.0,12.0,1.0,0.0,0.0,Performance,Oslo/Akershus,1.0,Car4Sale AS,0,Aktiv,245000.0,239283,-5717,https://www.finn.no/mobility/item/451313205
+Tesla Model 3,Tesla,Model 3,2021.0,106800.0,580.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,ELBILHALLEN AS,0,Aktiv,259000.0,253205,-5795,https://www.finn.no/mobility/item/449191958
+Tesla Model 3,Tesla,Model 3,2021.0,48500.0,580.0,13.033333333333331,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,299999.0,294059,-5940,https://www.finn.no/mobility/item/453379072
+Tesla Model 3,Tesla,Model 3,2024.0,37000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Hernes & Co,0,Aktiv,419900.0,413916,-5984,https://www.finn.no/mobility/item/452996173
+Tesla Model 3,Tesla,Model 3,2024.0,39300.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,LYSHOLM BIL TRONDHEIM,0,Aktiv,409900.0,403898,-6002,https://www.finn.no/mobility/item/452394640
+Tesla Model 3,Tesla,Model 3,2024.0,24500.0,513.0,29.366666666666667,1.0,0.0,1.0,Standard Range,Oslo/Akershus,1.0,Mobile Alnabru AS,0,Aktiv,329000.0,322974,-6026,https://www.finn.no/mobility/item/452384880
+Tesla Model 3,Tesla,Model 3,2020.0,147612.0,530.0,21.933333333333334,1.0,0.0,1.0,Performance,Nord-Norge,0.0,,0,Aktiv,230000.0,223953,-6047,https://www.finn.no/mobility/item/447357064
+Tesla Model 3,Tesla,Model 3,2023.0,15378.0,602.0,12.433333333333334,1.0,0.0,1.0,Performance,Vestland,0.0,,0,Aktiv,399000.0,392889,-6111,https://www.finn.no/mobility/item/452567064
+Tesla Model 3,Tesla,Model 3,2019.0,92000.0,530.0,12.0,1.0,0.0,1.0,Performance,Vestfold/Telemark,1.0,Dahl / Finne Auto AS,0,Aktiv,219900.0,213643,-6257,https://www.finn.no/mobility/item/452690813
+Tesla Model 3,Tesla,Model 3,2023.0,60500.0,547.0,16.033333333333335,1.0,0.0,1.0,Performance,Vestfold/Telemark,0.0,,0,Aktiv,369505.0,362954,-6551,https://www.finn.no/mobility/item/444240514
+Tesla Model 3,Tesla,Model 3,2019.0,145000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Pro Bilsalg AS,0,Aktiv,188000.0,181364,-6636,https://www.finn.no/mobility/item/440063976
+Tesla Model 3,Tesla,Model 3,2022.0,52679.0,491.0,5.966666666666667,2.0,0.0,0.0,Standard Range,Annet,0.0,,0,Aktiv,263532.0,256828,-6704,https://www.finn.no/mobility/item/452574069
+Tesla Model 3,Tesla,Model 3,2026.0,9300.0,660.0,45.16666666666666,1.0,0.0,0.0,Ukjent,Trøndelag,0.0,,0,Aktiv,447505.0,440620,-6885,https://www.finn.no/mobility/item/451690685
+Tesla Model 3,Tesla,Model 3,2020.0,112000.0,530.0,12.0,1.0,0.0,0.0,Performance,Sørlandet,1.0,BILAGENT AS,0,Aktiv,259900.0,253012,-6888,https://www.finn.no/mobility/item/450750445
+Tesla Model 3,Tesla,Model 3,2024.0,76200.0,629.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Gretland Bil AS,0,Aktiv,374000.0,367093,-6907,https://www.finn.no/mobility/item/450871062
+Tesla Model 3,Tesla,Model 3,2019.0,65000.0,409.0,12.0,1.0,0.0,1.0,Ukjent,Rogaland,1.0,Kyvik Auto AS,0,Aktiv,229000.0,222061,-6939,https://www.finn.no/mobility/item/449212969
+Tesla Model 3,Tesla,Model 3,2023.0,63500.0,547.0,17.5,5.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,372900.0,365936,-6964,https://www.finn.no/mobility/item/452237140
+Tesla Model 3,Tesla,Model 3,2019.0,96500.0,560.0,12.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Pro Bilsalg AS,0,Aktiv,218000.0,211005,-6995,https://www.finn.no/mobility/item/439465756
+Tesla Model 3,Tesla,Model 3,2023.0,61127.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Autolease Bilsalg,0,Aktiv,339000.0,331913,-7087,https://www.finn.no/mobility/item/451376885
+Tesla Model 3,Tesla,Model 3,2021.0,139800.0,580.0,12.0,1.0,0.0,1.0,Long Range,Vestland,1.0,AutoSwap AS,0,Aktiv,239800.0,232677,-7123,https://www.finn.no/mobility/item/449321029
+Tesla Model 3,Tesla,Model 3,2022.0,57000.0,547.0,12.0,1.0,0.0,1.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,339000.0,331867,-7133,https://www.finn.no/mobility/item/350316756
+Tesla Model 3,Tesla,Model 3,2025.0,8350.0,629.0,12.0,1.0,0.0,1.0,Ukjent,Vestland,1.0,Lieco Auto AS,0,Aktiv,459900.0,452754,-7146,https://www.finn.no/mobility/item/451894747
+Tesla Model 3,Tesla,Model 3,2023.0,49000.0,547.0,12.0,1.0,0.0,1.0,Performance,Vestland,1.0,PEGASUS BIL AS,0,Aktiv,369000.0,361801,-7199,https://www.finn.no/mobility/item/380525890
+Tesla Model 3,Tesla,Model 3,2024.0,71000.0,629.0,12.0,1.0,0.0,1.0,Ukjent,Oslo/Akershus,1.0,MARCUSBIL - Marcus Inberg AS,0,Aktiv,376505.0,369207,-7298,https://www.finn.no/mobility/item/436771910
+Tesla Model 3,Tesla,Model 3,2021.0,69500.0,614.0,12.0,1.0,0.0,1.0,Long Range,Sørlandet,1.0,BILSELGEREN AS,0,Aktiv,289000.0,281526,-7474,https://www.finn.no/mobility/item/452364602
+Tesla Model 3,Tesla,Model 3,2024.0,25000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Trøndelag,1.0,Autolinq AS,0,Aktiv,419900.0,412215,-7685,https://www.finn.no/mobility/item/452399074
+Tesla Model 3,Tesla,Model 3,2019.0,89000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,BROM CONSULTING AS,0,Aktiv,219900.0,212191,-7709,https://www.finn.no/mobility/item/451621956
+Tesla Model 3,Tesla,Model 3,2019.0,236500.0,530.0,12.733333333333333,1.0,0.0,0.0,Performance,Annet,0.0,,0,Aktiv,154532.0,146706,-7826,https://www.finn.no/mobility/item/453191301
+Tesla Model 3,Tesla,Model 3,2019.0,122000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Hernes & Co,0,Aktiv,209990.0,202039,-7951,https://www.finn.no/mobility/item/443530219
+Tesla Model 3,Tesla,Model 3,2019.0,105000.0,530.0,12.0,6.0,0.0,1.0,Performance,Trøndelag,1.0,KJELÅS BIL AS,0,Aktiv,239000.0,230982,-8018,https://www.finn.no/mobility/item/437977350
+Tesla Model 3,Tesla,Model 3,2019.0,144008.0,560.0,19.066666666666663,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,194532.0,186392,-8140,https://www.finn.no/mobility/item/451726505
+Tesla Model 3,Tesla,Model 3,2024.0,20000.0,629.0,12.0,1.0,0.0,1.0,Ukjent,Vestfold/Telemark,1.0,Dahl / Finne Auto AS,0,Aktiv,419900.0,411755,-8145,https://www.finn.no/mobility/item/449843979
+Tesla Model 3,Tesla,Model 3,2021.0,74608.0,547.0,15.633333333333333,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,324532.0,316327,-8205,https://www.finn.no/mobility/item/453154080
+Tesla Model 3,Tesla,Model 3,2021.0,66000.0,614.0,16.2,1.0,0.0,1.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,294532.0,286159,-8373,https://www.finn.no/mobility/item/451225414
+Tesla Model 3,Tesla,Model 3,2025.0,30167.0,702.0,12.0,1.0,0.0,0.0,Ukjent,Østfold,1.0,Grandahl Bil AS avd. Sarpsborg,0,Aktiv,419000.0,410568,-8432,https://www.finn.no/mobility/item/453482805
+Tesla Model 3,Tesla,Model 3,2021.0,93884.0,580.0,11.933333333333334,2.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,269434.0,260941,-8493,https://www.finn.no/mobility/item/435479286
+Tesla Model 3,Tesla,Model 3,2021.0,57581.0,614.0,12.766666666666667,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,294532.0,285989,-8543,https://www.finn.no/mobility/item/450151710
+Tesla Model 3,Tesla,Model 3,2022.0,64700.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,308700.0,300122,-8578,https://www.finn.no/mobility/item/448561163
+Tesla Model 3,Tesla,Model 3,2024.0,27200.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Hernes & Co,0,Aktiv,419990.0,411282,-8708,https://www.finn.no/mobility/item/445751349
+Tesla Model 3,Tesla,Model 3,2024.0,17824.0,528.0,33.333333333333336,1.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,497505.0,488792,-8713,https://www.finn.no/mobility/item/452477088
+Tesla Model 3,Tesla,Model 3,2021.0,115000.0,580.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,DAYTONA AUTO AS,0,Aktiv,254900.0,246171,-8729,https://www.finn.no/mobility/item/452894419
+Tesla Model 3,Tesla,Model 3,2019.0,117100.0,560.0,12.0,1.0,0.0,0.0,Long Range,Rogaland,1.0,AutoPoint AS,0,Aktiv,209000.0,200114,-8886,https://www.finn.no/mobility/item/453581668
+Tesla Model 3,Tesla,Model 3,2019.0,112300.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,AUTOHUSET SOGN AS,0,Aktiv,215000.0,206013,-8987,https://www.finn.no/mobility/item/452551404
+Tesla Model 3,Tesla,Model 3,2021.0,41000.0,580.0,9.766666666666667,1.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,339532.0,330398,-9134,https://www.finn.no/mobility/item/451772474
+Tesla Model 3,Tesla,Model 3,2019.0,118000.0,560.0,12.0,1.0,0.0,1.0,Performance,Østfold,1.0,Grandahl Bil AS avd. Sarpsborg,0,Aktiv,228000.0,218563,-9437,https://www.finn.no/mobility/item/452292067
+Tesla Model 3,Tesla,Model 3,2020.0,85800.0,560.0,3.8,1.0,0.0,0.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,224532.0,214996,-9536,https://www.finn.no/mobility/item/452183045
+Tesla Model 3,Tesla,Model 3,2023.0,28983.0,491.0,12.0,1.0,0.0,1.0,Ukjent,Vestland,1.0,RøhneSelmer AS avd. Hønefoss,0,Aktiv,309900.0,300327,-9573,https://www.finn.no/mobility/item/450309088
+Tesla Model 3,Tesla,Model 3,2025.0,34000.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Carzone AS,0,Aktiv,429000.0,419425,-9575,https://www.finn.no/mobility/item/452623033
+Tesla Model 3,Tesla,Model 3,2019.0,164858.0,600.0,15.833333333333334,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,179532.0,169954,-9578,https://www.finn.no/mobility/item/453006315
+Tesla Model 3,Tesla,Model 3,2021.0,74954.0,448.0,15.433333333333334,2.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,242129.0,232511,-9618,https://www.finn.no/mobility/item/381480513
+Tesla Model 3,Tesla,Model 3,2020.0,72818.0,530.0,23.133333333333333,2.0,0.0,0.0,Ukjent,Vestland,1.0,Tesla Motors Norway AS,0,Aktiv,263500.0,253872,-9628,https://www.finn.no/mobility/item/450715986
+Tesla Model 3,Tesla,Model 3,2022.0,65000.0,491.0,6.3,2.0,0.0,1.0,Standard Range,Vestfold/Telemark,0.0,,0,Aktiv,264531.0,254865,-9666,https://www.finn.no/mobility/item/450918934
+Tesla Model 3,Tesla,Model 3,2023.0,60200.0,602.0,12.0,1.0,0.0,1.0,Long Range,Trøndelag,1.0,Trøndelag Bil AS,0,Aktiv,349900.0,340091,-9809,https://www.finn.no/mobility/item/452847066
+Tesla Model 3,Tesla,Model 3,2020.0,88000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Pitstop Bilsalg Ny AS,0,Aktiv,228982.0,218940,-10042,https://www.finn.no/mobility/item/440865301
+Tesla Model 3,Tesla,Model 3,2021.0,52000.0,448.0,13.1,1.0,0.0,1.0,Ukjent,Vestland,0.0,,0,Aktiv,239434.0,229337,-10097,https://www.finn.no/mobility/item/438664731
+Tesla Model 3,Tesla,Model 3,2020.0,138675.0,560.0,6.233333333333333,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,199900.0,189775,-10125,https://www.finn.no/mobility/item/451956869
+Tesla Model 3,Tesla,Model 3,2019.0,119500.0,560.0,12.0,1.0,0.0,0.0,Performance,Oslo/Akershus,1.0,Lillestrøm Bilsenter AS,0,Aktiv,209000.0,198777,-10223,https://www.finn.no/mobility/item/437878526
+Tesla Model 3,Tesla,Model 3,2019.0,88000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Pro Bilsalg AS,0,Aktiv,219000.0,208720,-10280,https://www.finn.no/mobility/item/448535500
+Tesla Model 3,Tesla,Model 3,2021.0,99990.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Rebil,0,Aktiv,259900.0,249548,-10352,https://www.finn.no/mobility/item/452916939
+Tesla Model 3,Tesla,Model 3,2025.0,22000.0,528.0,35.333333333333336,1.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,499990.0,489626,-10364,https://www.finn.no/mobility/item/439687827
+Tesla Model 3,Tesla,Model 3,2022.0,106000.0,602.0,12.0,1.0,0.0,0.0,Long Range,Trøndelag,1.0,Tunga Bil AS,0,Aktiv,289000.0,278568,-10432,https://www.finn.no/mobility/item/442845987
+Tesla Model 3,Tesla,Model 3,2024.0,44478.0,513.0,30.7,1.0,0.0,1.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,342505.0,332058,-10447,https://www.finn.no/mobility/item/447725358
+Tesla Model 3,Tesla,Model 3,2021.0,68477.0,448.0,18.5,4.0,0.0,1.0,Standard Range,Annet,0.0,,0,Aktiv,239999.0,229461,-10538,https://www.finn.no/mobility/item/453115288
+Tesla Model 3,Tesla,Model 3,2024.0,19800.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Rebil,0,Aktiv,428900.0,418056,-10844,https://www.finn.no/mobility/item/453565149
+Tesla Model 3,Tesla,Model 3,2021.0,98200.0,600.0,9.766666666666667,3.0,0.0,0.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,264532.0,253671,-10861,https://www.finn.no/mobility/item/451752780
+Tesla Model 3,Tesla,Model 3,2020.0,80000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,SANDNES BRUKTBIL AS,0,Aktiv,245000.0,234050,-10950,https://www.finn.no/mobility/item/447195371
+Tesla Model 3,Tesla,Model 3,2019.0,63000.0,560.0,12.0,1.0,0.0,0.0,Performance,Annet,1.0,HS AUTO AS,0,Aktiv,259000.0,247959,-11041,https://www.finn.no/mobility/item/410893561
+Tesla Model 3,Tesla,Model 3,2021.0,77900.0,614.0,15.466666666666669,2.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,294523.0,283382,-11141,https://www.finn.no/mobility/item/447265778
+Tesla Model 3,Tesla,Model 3,2024.0,16700.0,513.0,30.466666666666665,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,360000.0,348781,-11219,https://www.finn.no/mobility/item/435793568
+Tesla Model 3,Tesla,Model 3,2021.0,93850.0,448.0,12.0,1.0,0.0,0.0,Ukjent,Vestfold/Telemark,0.0,,0,Aktiv,227129.0,215896,-11233,https://www.finn.no/mobility/item/343650039
+Tesla Model 3,Tesla,Model 3,2023.0,45000.0,602.0,12.0,1.0,0.0,1.0,Long Range,Vestland,1.0,Bergen Bilcenter AS,0,Aktiv,359000.0,347750,-11250,https://www.finn.no/mobility/item/450448201
+Tesla Model 3,Tesla,Model 3,2019.0,86500.0,530.0,7.6,1.0,0.0,1.0,Performance,Oslo/Akershus,0.0,,0,Aktiv,224532.0,213094,-11438,https://www.finn.no/mobility/item/446876402
+Tesla Model 3,Tesla,Model 3,2021.0,61600.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Rogaland,1.0,SANDNES BRUKTBIL AS,0,Aktiv,245000.0,233423,-11577,https://www.finn.no/mobility/item/445155242
+Tesla Model 3,Tesla,Model 3,2024.0,37900.0,513.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,SWITCH BIL AS,0,Aktiv,349990.0,338330,-11660,https://www.finn.no/mobility/item/452858490
+Tesla Model 3,Tesla,Model 3,2019.0,137335.0,500.0,12.0,2.0,0.0,1.0,Long Range,Annet,1.0,Myauto AS,0,Aktiv,209900.0,198125,-11775,https://www.finn.no/mobility/item/452530773
+Tesla Model 3,Tesla,Model 3,2019.0,137700.0,409.0,12.0,1.0,0.0,1.0,Ukjent,Rogaland,1.0,Forus Bil AS,0,Aktiv,179000.0,167048,-11952,https://www.finn.no/mobility/item/451336513
+Tesla Model 3,Tesla,Model 3,2021.0,77700.0,448.0,12.0,1.0,0.0,1.0,Standard Range,Rogaland,1.0,Autosenter Sandnes AS,0,Aktiv,239000.0,227028,-11972,https://www.finn.no/mobility/item/449512049
+Tesla Model 3,Tesla,Model 3,2023.0,29676.0,602.0,17.633333333333333,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,Birger N. Haug AS avd. Oslo,0,Aktiv,399900.0,387671,-12229,https://www.finn.no/mobility/item/452551082
+Tesla Model 3,Tesla,Model 3,2020.0,62493.0,560.0,24.83333333333333,1.0,0.0,0.0,Ukjent,Oslo/Akershus,1.0,Tesla Motors Norway AS,0,Aktiv,260400.0,248153,-12247,https://www.finn.no/mobility/item/452398642
+Tesla Model 3,Tesla,Model 3,2022.0,53500.0,602.0,0.4333333333333333,3.0,0.0,1.0,Long Range,Vestfold/Telemark,0.0,,0,Aktiv,324000.0,311585,-12415,https://www.finn.no/mobility/item/444684269
+Tesla Model 3,Tesla,Model 3,2019.0,165000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Hernes & Co,0,Aktiv,189990.0,177412,-12578,https://www.finn.no/mobility/item/448694236
+Tesla Model 3,Tesla,Model 3,2021.0,72230.0,614.0,21.73333333333333,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,299999.0,287310,-12689,https://www.finn.no/mobility/item/453279955
+Tesla Model 3,Tesla,Model 3,2021.0,95000.0,530.0,9.666666666666666,3.0,0.0,0.0,Performance,Annet,0.0,,0,Aktiv,269532.0,256702,-12830,https://www.finn.no/mobility/item/451128817
+Tesla Model 3,Tesla,Model 3,2022.0,76600.0,491.0,12.0,1.0,0.0,1.0,Standard Range,Rogaland,1.0,UNIBIL AS avd. Stavanger,0,Aktiv,269000.0,256105,-12895,https://www.finn.no/mobility/item/452985750
+Tesla Model 3,Tesla,Model 3,2019.0,75000.0,560.0,12.0,2.0,0.0,1.0,Performance,Annet,1.0,Gardermoen Bil AS,0,Aktiv,269900.0,256923,-12977,https://www.finn.no/mobility/item/404320095
+Tesla Model 3,Tesla,Model 3,2023.0,66000.0,602.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Exotic Motors,0,Aktiv,355000.0,341745,-13255,https://www.finn.no/mobility/item/450944923
+Tesla Model 3,Tesla,Model 3,2019.0,116000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Storhamar Bil AS,0,Aktiv,215000.0,201676,-13324,https://www.finn.no/mobility/item/452052124
+Tesla Model 3,Tesla,Model 3,2021.0,88000.0,448.0,15.666666666666666,1.0,0.0,0.0,Standard Range,Annet,1.0,AUTOWAX AS,0,Aktiv,229434.0,216026,-13408,https://www.finn.no/mobility/item/406911190
+Tesla Model 3,Tesla,Model 3,2019.0,101000.0,530.0,19.23333333333333,4.0,0.0,0.0,Performance,Annet,1.0,Nes-Bil AS,0,Aktiv,232434.0,218984,-13450,https://www.finn.no/mobility/item/434265545
+Tesla Model 3,Tesla,Model 3,2024.0,58000.0,629.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,NICK AUTO AS,0,Aktiv,389000.0,375478,-13522,https://www.finn.no/mobility/item/450261348
+Tesla Model 3,Tesla,Model 3,2024.0,23000.0,513.0,32.166666666666664,1.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,335000.0,321410,-13590,https://www.finn.no/mobility/item/452582971
+Tesla Model 3,Tesla,Model 3,2021.0,66000.0,448.0,19.133333333333333,2.0,0.0,1.0,Standard Range,Oslo/Akershus,0.0,,0,Aktiv,239532.0,225902,-13630,https://www.finn.no/mobility/item/446774382
+Tesla Model 3,Tesla,Model 3,2019.0,105000.0,560.0,12.666666666666666,2.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,229532.0,215733,-13799,https://www.finn.no/mobility/item/451801696
+Tesla Model 3,Tesla,Model 3,2020.0,119000.0,560.0,25.066666666666663,2.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,219532.0,205651,-13881,https://www.finn.no/mobility/item/451813992
+Tesla Model 3,Tesla,Model 3,2024.0,20500.0,629.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO BRAVIA AS,0,Aktiv,429990.0,416038,-13952,https://www.finn.no/mobility/item/449213747
+Tesla Model 3,Tesla,Model 3,2019.0,164640.0,560.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Storhamar Bil AS,0,Aktiv,199000.0,184502,-14498,https://www.finn.no/mobility/item/436792422
+Tesla Model 3,Tesla,Model 3,2019.0,81507.0,560.0,13.833333333333334,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,239532.0,224957,-14575,https://www.finn.no/mobility/item/448127663
+Tesla Model 3,Tesla,Model 3,2020.0,193500.0,560.0,6.833333333333333,3.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,160000.0,145170,-14830,https://www.finn.no/mobility/item/452332563
+Tesla Model 3,Tesla,Model 3,2021.0,97751.0,448.0,18.266666666666666,1.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,235000.0,220106,-14894,https://www.finn.no/mobility/item/418328028
+Tesla Model 3,Tesla,Model 3,2019.0,116402.0,560.0,12.0,1.0,0.0,0.0,Ukjent,Rogaland,1.0,Motor Bureau AS,0,Aktiv,214900.0,199945,-14955,https://www.finn.no/mobility/item/453112812
+Tesla Model 3,Tesla,Model 3,2019.0,99250.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,AUTO BRAVIA AS,0,Aktiv,229990.0,214752,-15238,https://www.finn.no/mobility/item/437669520
+Tesla Model 3,Tesla,Model 3,2021.0,77600.0,580.0,10.0,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,269000.0,253509,-15491,https://www.finn.no/mobility/item/435960445
+Tesla Model 3,Tesla,Model 3,2020.0,73500.0,409.0,12.0,1.0,0.0,1.0,Standard Range,Vestland,1.0,DANIAL AUTO7 AS,0,Aktiv,224800.0,209271,-15529,https://www.finn.no/mobility/item/426839448
+Tesla Model 3,Tesla,Model 3,2019.0,105000.0,530.0,12.0,6.0,0.0,1.0,Performance,Trøndelag,1.0,KJELÅS BIL AS IKKE AKTIV,0,Aktiv,249000.0,233436,-15564,https://www.finn.no/mobility/item/440359993
+Tesla Model 3,Tesla,Model 3,2022.0,61000.0,491.0,-0.0333333333333333,1.0,0.0,1.0,Standard Range,Trøndelag,1.0,Støre Bil,0,Aktiv,279000.0,263309,-15691,https://www.finn.no/mobility/item/453492164
+Tesla Model 3,Tesla,Model 3,2025.0,99.0,660.0,45.03333333333333,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,482505.0,466783,-15722,https://www.finn.no/mobility/item/451765124
+Tesla Model 3,Tesla,Model 3,2021.0,80000.0,560.0,10.366666666666667,2.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,259000.0,243270,-15730,https://www.finn.no/mobility/item/450755116
+Tesla Model 3,Tesla,Model 3,2021.0,96400.0,580.0,13.433333333333334,1.0,0.0,1.0,Long Range,Vestfold/Telemark,0.0,,0,Aktiv,249999.0,234083,-15916,https://www.finn.no/mobility/item/452275525
+Tesla Model 3,Tesla,Model 3,2019.0,107000.0,560.0,9.1,1.0,0.0,0.0,Long Range,Annet,1.0,Hauken Auto AS,0,Aktiv,229999.0,213971,-16028,https://www.finn.no/mobility/item/430858614
+Tesla Model 3,Tesla,Model 3,2021.0,74950.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Rebil,0,Aktiv,289000.0,272913,-16087,https://www.finn.no/mobility/item/452388277
+Tesla Model 3,Tesla,Model 3,2019.0,92814.0,530.0,19.066666666666663,1.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,234532.0,218357,-16175,https://www.finn.no/mobility/item/452422828
+Tesla Model 3,Tesla,Model 3,2020.0,99500.0,580.0,12.0,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,FHM AUTOSPORT AS,0,Aktiv,259000.0,242709,-16291,https://www.finn.no/mobility/item/450867841
+Tesla Model 3,Tesla,Model 3,2022.0,44000.0,491.0,9.766666666666667,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,289532.0,272999,-16533,https://www.finn.no/mobility/item/447870646
+Tesla Model 3,Tesla,Model 3,2019.0,134000.0,560.0,13.766666666666667,2.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,214531.0,197916,-16615,https://www.finn.no/mobility/item/453321570
+Tesla Model 3,Tesla,Model 3,2019.0,173500.0,560.0,12.266666666666667,1.0,0.0,1.0,Long Range,Østfold,1.0,CAR CONNECT AS,0,Aktiv,169900.0,153087,-16813,https://www.finn.no/mobility/item/447157371
+Tesla Model 3,Tesla,Model 3,2021.0,94689.0,560.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,Autolease Bilsalg,0,Aktiv,259000.0,242043,-16957,https://www.finn.no/mobility/item/449330857
+Tesla Model 3,Tesla,Model 3,2025.0,1500.0,629.0,42.16666666666666,1.0,0.0,0.0,Long Range,Oslo/Akershus,1.0,Bruktklar Bilhandel AS,0,Aktiv,487343.0,470375,-16968,https://www.finn.no/mobility/item/429545732
+Tesla Model 3,Tesla,Model 3,2023.0,51800.0,547.0,12.0,1.0,0.0,1.0,Performance,Vestland,1.0,Vest Motor AS,0,Aktiv,379000.0,361801,-17199,https://www.finn.no/mobility/item/441315191
+Tesla Model 3,Tesla,Model 3,2021.0,41500.0,448.0,12.0,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,259532.0,242305,-17227,https://www.finn.no/mobility/item/264206183
+Tesla Model 3,Tesla,Model 3,2019.0,189999.0,409.0,19.03333333333333,1.0,0.0,0.0,Ukjent,Annet,1.0,Maxdrive Automotive AS,0,Aktiv,159999.0,142390,-17609,https://www.finn.no/mobility/item/452595077
+Tesla Model 3,Tesla,Model 3,2021.0,125751.0,567.0,15.866666666666667,1.0,0.0,0.0,Performance,Rogaland,1.0,DALANE AUTO AS,0,Aktiv,279000.0,261366,-17634,https://www.finn.no/mobility/item/453433756
+Tesla Model 3,Tesla,Model 3,2020.0,140000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Hernes & Co,0,Aktiv,209990.0,192342,-17648,https://www.finn.no/mobility/item/448073229
+Tesla Model 3,Tesla,Model 3,2024.0,22000.0,528.0,12.0,1.0,0.0,1.0,Performance,Vestland,1.0,Importservice Bil AS,0,Aktiv,499000.0,481138,-17862,https://www.finn.no/mobility/item/451536654
+Tesla Model 3,Tesla,Model 3,2020.0,108500.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,"Otto Moe, Grong",0,Aktiv,229900.0,211928,-17972,https://www.finn.no/mobility/item/451961062
+Tesla Model 3,Tesla,Model 3,2019.0,85126.0,560.0,21.633333333333333,2.0,0.0,0.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,219999.0,201869,-18130,https://www.finn.no/mobility/item/451153242
+Tesla Model 3,Tesla,Model 3,2024.0,29850.0,528.0,30.566666666666663,1.0,0.0,1.0,Performance,Annet,0.0,,0,Aktiv,505000.0,486011,-18989,https://www.finn.no/mobility/item/440226113
+Tesla Model 3,Tesla,Model 3,2020.0,174000.0,530.0,7.466666666666667,2.0,0.0,0.0,Performance,Rogaland,0.0,,0,Aktiv,174434.0,155378,-19056,https://www.finn.no/mobility/item/408702692
+Tesla Model 3,Tesla,Model 3,2025.0,12000.0,571.0,41.63333333333333,1.0,0.0,1.0,Ukjent,Østfold,1.0,GOLDEN CARS AS,0,Aktiv,529505.0,510411,-19094,https://www.finn.no/mobility/item/451973671
+Tesla Model 3,Tesla,Model 3,2019.0,109000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Vestfold/Telemark,1.0,ELDORSEN AUTO AS,0,Aktiv,219900.0,200633,-19267,https://www.finn.no/mobility/item/429659732
+Tesla Model 3,Tesla,Model 3,2021.0,74000.0,448.0,17.733333333333334,2.0,0.0,0.0,Ukjent,Annet,0.0,,0,Aktiv,254532.0,234557,-19975,https://www.finn.no/mobility/item/451387103
+Tesla Model 3,Tesla,Model 3,2021.0,86566.0,580.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Rebil Salgshjelp,0,Aktiv,259000.0,238977,-20023,https://www.finn.no/mobility/item/447563255
+Tesla Model 3,Tesla,Model 3,2021.0,82800.0,614.0,15.933333333333334,5.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,289532.0,269496,-20036,https://www.finn.no/mobility/item/452442652
+Tesla Model 3,Tesla,Model 3,2021.0,66600.0,580.0,10.033333333333331,1.0,0.0,1.0,Long Range,Sørlandet,1.0,CARSTORE KRISTIANSAND,0,Aktiv,277900.0,257726,-20174,https://www.finn.no/mobility/item/453396968
+Tesla Model 3,Tesla,Model 3,2026.0,150.0,716.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Carzone AS,0,Aktiv,499000.0,478692,-20308,https://www.finn.no/mobility/item/446044441
+Tesla Model 3,Tesla,Model 3,2019.0,107000.0,530.0,12.933333333333334,2.0,0.0,0.0,Performance,Vestland,0.0,,0,Aktiv,244532.0,224196,-20336,https://www.finn.no/mobility/item/453433486
+Tesla Model 3,Tesla,Model 3,2021.0,87858.0,448.0,17.766666666666666,2.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,239532.0,219061,-20471,https://www.finn.no/mobility/item/409310668
+Tesla Model 3,Tesla,Model 3,2020.0,105322.0,580.0,4.2,2.0,0.0,0.0,Long Range,Annet,0.0,,0,Aktiv,264532.0,243774,-20758,https://www.finn.no/mobility/item/449733611
+Tesla Model 3,Tesla,Model 3,2024.0,22800.0,513.0,30.433333333333334,1.0,0.0,1.0,Ukjent,Rogaland,0.0,,0,Aktiv,349999.0,329159,-20840,https://www.finn.no/mobility/item/452775361
+Tesla Model 3,Tesla,Model 3,2024.0,20520.0,629.0,30.7,1.0,0.0,1.0,Long Range,Oslo/Akershus,0.0,,0,Aktiv,432505.0,411597,-20908,https://www.finn.no/mobility/item/451321045
+Tesla Model 3,Tesla,Model 3,2024.0,56000.0,629.0,21.83333333333333,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,399900.0,378537,-21363,https://www.finn.no/mobility/item/445639070
+Tesla Model 3,Tesla,Model 3,2019.0,167700.0,560.0,12.0,1.0,0.0,1.0,Long Range,Oslo/Akershus,1.0,RS Bilsalg AS,0,Aktiv,169000.0,146834,-22166,https://www.finn.no/mobility/item/452951157
+Tesla Model 3,Tesla,Model 3,2019.0,123000.0,560.0,12.4,7.0,0.0,0.0,Long Range,Nord-Norge,0.0,,0,Aktiv,224532.0,202315,-22217,https://www.finn.no/mobility/item/451733628
+Tesla Model 3,Tesla,Model 3,2021.0,101000.0,448.0,12.0,1.0,0.0,0.0,Standard Range,Sørlandet,1.0,BILAGENT AS,0,Aktiv,244900.0,222413,-22487,https://www.finn.no/mobility/item/450024125
+Tesla Model 3,Tesla,Model 3,2025.0,28600.0,660.0,35.36666666666667,1.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,444999.0,422333,-22666,https://www.finn.no/mobility/item/452546789
+Tesla Model 3,Tesla,Model 3,2025.0,10000.0,571.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,Rebil Salgshjelp,0,Aktiv,510000.0,486890,-23110,https://www.finn.no/mobility/item/440028252
+Tesla Model 3,Tesla,Model 3,2024.0,17752.0,629.0,12.0,1.0,0.0,0.0,Long Range,Trøndelag,1.0,Gangås Auto AS,0,Aktiv,449000.0,424834,-24166,https://www.finn.no/mobility/item/452961919
+Tesla Model 3,Tesla,Model 3,2025.0,19000.0,660.0,37.8,1.0,0.0,1.0,Long Range,Rogaland,0.0,,0,Aktiv,449000.0,423674,-25326,https://www.finn.no/mobility/item/452788273
+Tesla Model 3,Tesla,Model 3,2019.0,93000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,BROM CONSULTING AS,0,Aktiv,239900.0,214092,-25808,https://www.finn.no/mobility/item/451911281
+Tesla Model 3,Tesla,Model 3,2024.0,19000.0,513.0,22.766666666666666,1.0,0.0,1.0,Ukjent,Annet,0.0,,0,Aktiv,352343.0,326370,-25973,https://www.finn.no/mobility/item/424923387
+Tesla Model 3,Tesla,Model 3,2021.0,24200.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,JP-AUTO AS,0,Aktiv,379900.0,353540,-26360,https://www.finn.no/mobility/item/415461429
+Tesla Model 3,Tesla,Model 3,2022.0,56765.0,602.0,12.0,1.0,0.0,1.0,Long Range,Rogaland,1.0,Motor Bureau AS,0,Aktiv,344900.0,318306,-26594,https://www.finn.no/mobility/item/453112925
+Tesla Model 3,Tesla,Model 3,2023.0,64050.0,602.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Sulland Bilsenter Lillehammer,0,Aktiv,369500.0,342869,-26631,https://www.finn.no/mobility/item/451814948
+Tesla Model 3,Tesla,Model 3,2025.0,17500.0,513.0,12.0,1.0,0.0,0.0,Ukjent,Annet,1.0,NEXTDRIVE AS,0,Aktiv,369000.0,342262,-26738,https://www.finn.no/mobility/item/451764200
+Tesla Model 3,Tesla,Model 3,2020.0,42037.0,560.0,6.266666666666667,1.0,0.0,0.0,Ukjent,Vestland,1.0,Tesla Motors Norway AS,0,Aktiv,272300.0,244751,-27549,https://www.finn.no/mobility/item/450721561
+Tesla Model 3,Tesla,Model 3,2020.0,99900.0,409.0,12.0,1.0,0.0,0.0,Standard Range,Østfold,1.0,Grandahl Bil AS avd. Fredrikstad,0,Aktiv,225000.0,196784,-28216,https://www.finn.no/mobility/item/450833836
+Tesla Model 3,Tesla,Model 3,2022.0,79000.0,602.0,0.9333333333333332,1.0,0.0,1.0,Ukjent,Vestland,0.0,,0,Aktiv,337532.0,309201,-28331,https://www.finn.no/mobility/item/449320205
+Tesla Model 3,Tesla,Model 3,2019.0,141000.0,560.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,AUTO SELECT AS,0,Aktiv,219990.0,190587,-29403,https://www.finn.no/mobility/item/439435834
+Tesla Model 3,Tesla,Model 3,2022.0,49000.0,547.0,12.0,1.0,0.0,1.0,Performance,Vestland,1.0,Strømmen Bilformidling AS,0,Aktiv,359000.0,329336,-29664,https://www.finn.no/mobility/item/450756875
+Tesla Model 3,Tesla,Model 3,2019.0,136000.0,530.0,12.0,1.0,0.0,1.0,Performance,Oslo/Akershus,1.0,Oslo Bilsenter AS,0,Aktiv,219000.0,188315,-30685,https://www.finn.no/mobility/item/446407698
+Tesla Model 3,Tesla,Model 3,2022.0,59500.0,491.0,6.033333333333333,1.0,0.0,1.0,Standard Range,Vestfold/Telemark,0.0,,0,Aktiv,294532.0,261666,-32866,https://www.finn.no/mobility/item/445964872
+Tesla Model 3,Tesla,Model 3,2025.0,8600.0,528.0,35.36666666666667,1.0,0.0,1.0,Performance,Rogaland,1.0,Alendalsgarasjen,0,Aktiv,539000.0,505757,-33243,https://www.finn.no/mobility/item/437182037
+Tesla Model 3,Tesla,Model 3,2025.0,16140.0,528.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Hokksund Auto AS,0,Aktiv,529000.0,495157,-33843,https://www.finn.no/mobility/item/452796482
+Tesla Model 3,Tesla,Model 3,2019.0,149651.0,560.0,13.366666666666667,5.0,0.0,0.0,Ukjent,Oslo/Akershus,0.0,,0,Aktiv,214532.0,180420,-34112,https://www.finn.no/mobility/item/451537669
+Tesla Model 3,Tesla,Model 3,2024.0,24000.0,629.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,BILHALLEN ULSTEINVIK AS,0,Aktiv,439000.0,404701,-34299,https://www.finn.no/mobility/item/437947379
+Tesla Model 3,Tesla,Model 3,2021.0,39000.0,580.0,12.0,1.0,0.0,1.0,Ukjent,Annet,1.0,ØKERN BILAUKSJON AS,0,Aktiv,378900.0,340885,-38015,https://www.finn.no/mobility/item/287057533
+Tesla Model 3,Tesla,Model 3,2022.0,73000.0,491.0,12.0,1.0,0.0,0.0,Standard Range,Annet,1.0,FHM AUTOSPORT AS,0,Aktiv,299000.0,260972,-38028,https://www.finn.no/mobility/item/426537888
+Tesla Model 3,Tesla,Model 3,2024.0,47000.0,629.0,32.833333333333336,3.0,0.0,1.0,Long Range,Annet,0.0,,0,Aktiv,417505.0,379404,-38101,https://www.finn.no/mobility/item/452905693
+Tesla Model 3,Tesla,Model 3,2021.0,98800.0,614.0,21.866666666666667,1.0,0.0,1.0,Ukjent,Nord-Norge,0.0,,0,Aktiv,319532.0,280731,-38801,https://www.finn.no/mobility/item/450189357
+Tesla Model 3,Tesla,Model 3,2022.0,72000.0,559.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Carzone AS,0,Aktiv,359000.0,316852,-42148,https://www.finn.no/mobility/item/445236988
+Tesla Model 3,Tesla,Model 3,2021.0,85221.0,567.0,18.433333333333334,2.0,0.0,0.0,Performance,Annet,0.0,,0,Aktiv,349000.0,305080,-43920,https://www.finn.no/mobility/item/450648850
+Tesla Model 3,Tesla,Model 3,2021.0,55000.0,567.0,12.0,2.0,0.0,1.0,Performance,Oslo/Akershus,1.0,ADAM AUTO AS,0,Aktiv,375000.0,327352,-47648,https://www.finn.no/mobility/item/432141013
+Tesla Model 3,Tesla,Model 3,2019.0,74000.0,560.0,12.0,1.0,0.0,0.0,Long Range,Annet,1.0,Gipling Bil AS,0,Aktiv,299000.0,248507,-50493,https://www.finn.no/mobility/item/325670677
+Tesla Model 3,Tesla,Model 3,2024.0,28000.0,513.0,12.0,1.0,0.0,1.0,Ukjent,Oslo/Akershus,1.0,Saxegaard Auto AS,0,Aktiv,339900.0,288924,-50976,https://www.finn.no/mobility/item/453418982
+Tesla Model 3,Tesla,Model 3,2021.0,130000.0,567.0,12.0,1.0,0.0,1.0,Performance,Annet,1.0,Bilpunktet AS,0,Aktiv,329900.0,276113,-53787,https://www.finn.no/mobility/item/449195582
+Tesla Model 3,Tesla,Model 3,2021.0,110311.0,547.0,12.0,1.0,0.0,1.0,Performance,Østfold,1.0,Kråkerøy Autosalg,0,Aktiv,349900.0,293769,-56131,https://www.finn.no/mobility/item/277043276
+Tesla Model 3,Tesla,Model 3,2019.0,93000.0,560.0,12.0,1.0,0.0,1.0,Long Range,Annet,1.0,Gipling Bil AS,0,Aktiv,299000.0,213664,-85336,https://www.finn.no/mobility/item/326842879
+Tesla Model 3,Tesla,Model 3,2026.0,1020.0,702.0,12.0,1.0,0.0,1.0,Long Range,Østfold,1.0,Grandahl Bil AS avd. Fredrikstad,0,Aktiv,578000.0,491542,-86458,https://www.finn.no/mobility/item/452708254
