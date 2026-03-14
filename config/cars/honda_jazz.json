@@ -1,0 +1,38 @@
+{
+    "make": "Honda",
+    "model": "Jazz",
+    "apify_start_url": "https://www.finn.no/mobility/search/?q=honda+jazz",
+    "trims": [
+        {
+            "name": "Trend",
+            "patterns": [
+                "\\bTrend\\b"
+            ]
+        },
+        {
+            "name": "Comfort",
+            "patterns": [
+                "\\bComfort\\b"
+            ]
+        },
+        {
+            "name": "Elegance",
+            "patterns": [
+                "\\bElegance\\b"
+            ]
+        },
+        {
+            "name": "Executive",
+            "patterns": [
+                "\\bExecutive\\b",
+                "\\bExec\\b"
+            ]
+        },
+        {
+            "name": "Crosstar",
+            "patterns": [
+                "\\bCrosstar\\b"
+            ]
+        }
+    ]
+}

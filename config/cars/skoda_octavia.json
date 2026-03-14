@@ -1,0 +1,48 @@
+{
+    "make": "Skoda",
+    "model": "Octavia",
+    "apify_start_url": "https://www.finn.no/mobility/search/?q=skoda+octavia",
+    "trims": [
+        {
+            "name": "Active",
+            "patterns": [
+                "\\bActive\\b"
+            ]
+        },
+        {
+            "name": "Ambition",
+            "patterns": [
+                "\\bAmbition\\b"
+            ]
+        },
+        {
+            "name": "Style",
+            "patterns": [
+                "\\bStyle\\b"
+            ]
+        },
+        {
+            "name": "Laurin & Klement",
+            "patterns": [
+                "\\bLaurin & Klement\\b",
+                "\\bLaurin\\b",
+                "\\bKlement\\b",
+                "\\bL&K\\b",
+                "\\bL & K\\b"
+            ]
+        },
+        {
+            "name": "RS",
+            "patterns": [
+                "\\bRS\\b",
+                "\\bvRS\\b"
+            ]
+        },
+        {
+            "name": "Scout",
+            "patterns": [
+                "\\bScout\\b"
+            ]
+        }
+    ]
+}

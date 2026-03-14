@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-03T21:22:04.808626",
+  "generated_at": "2026-03-03T22:29:41.508640",
   "profiles": [
     {
       "profile": "nissan_leaf",
       "label": "Nissan Leaf",
-      "count": 704
+      "count": 733
     },
     {
       "profile": "tesla_model_3",

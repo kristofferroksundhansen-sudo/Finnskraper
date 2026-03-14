@@ -1,0 +1,40 @@
+{
+    "make": "Kia",
+    "model": "Ceed",
+    "apify_start_url": "https://www.finn.no/mobility/search/?q=kia+ceed",
+    "trims": [
+        {
+            "name": "Classic",
+            "patterns": [
+                "\\bClassic\\b"
+            ]
+        },
+        {
+            "name": "Active",
+            "patterns": [
+                "\\bActive\\b"
+            ]
+        },
+        {
+            "name": "Exclusive",
+            "patterns": [
+                "\\bExclusive\\b",
+                "\\bExcl\\b"
+            ]
+        },
+        {
+            "name": "GT-Line",
+            "patterns": [
+                "\\bGT-Line\\b",
+                "\\bGT Line\\b",
+                "\\bGTLine\\b"
+            ]
+        },
+        {
+            "name": "Premium",
+            "patterns": [
+                "\\bPremium\\b"
+            ]
+        }
+    ]
+}

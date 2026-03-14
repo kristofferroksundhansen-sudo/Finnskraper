@@ -261,7 +261,7 @@ def main():
         df_new['last_seen_date'] = today_str
 
         # Velg kolonner for historisk lagring
-        hist_cols = ['finn_id', 'title', 'url', 'location', 'city', 'dealer_name',
+        hist_cols = ['finn_id', 'title', 'subtitle', 'description', 'url', 'location', 'city', 'dealer_name',
                      'is_dealer', 'region', 'car_make', 'car_model', 'price_cleaned',
                      'year_cleaned', 'mileage_cleaned', 'battery_capacity_cleaned',
                      'effect_cleaned', 'range_km_cleaned', 'months_to_eu_cleaned',

@@ -1,0 +1,37 @@
+{
+    "make": "Mazda",
+    "model": "3",
+    "apify_start_url": "https://www.finn.no/mobility/search/?q=mazda+3",
+    "trims": [
+        {
+            "name": "Core",
+            "patterns": [
+                "\\bCore\\b"
+            ]
+        },
+        {
+            "name": "Vision",
+            "patterns": [
+                "\\bVision\\b"
+            ]
+        },
+        {
+            "name": "Optimum",
+            "patterns": [
+                "\\bOptimum\\b"
+            ]
+        },
+        {
+            "name": "Cosmo",
+            "patterns": [
+                "\\bCosmo\\b"
+            ]
+        },
+        {
+            "name": "Sky",
+            "patterns": [
+                "\\bSky\\b"
+            ]
+        }
+    ]
+}

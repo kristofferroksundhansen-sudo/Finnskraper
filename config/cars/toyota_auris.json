@@ -1,0 +1,33 @@
+{
+    "make": "Toyota",
+    "model": "Auris",
+    "apify_start_url": "https://www.finn.no/mobility/search/?q=toyota+auris",
+    "trims": [
+        {
+            "name": "Active",
+            "patterns": [
+                "\\bActive\\b",
+                "\\bAktiv\\b"
+            ]
+        },
+        {
+            "name": "Sense",
+            "patterns": [
+                "\\bSense\\b"
+            ]
+        },
+        {
+            "name": "Executive",
+            "patterns": [
+                "\\bExecutive\\b",
+                "\\bExec\\b"
+            ]
+        },
+        {
+            "name": "Lounge",
+            "patterns": [
+                "\\bLounge\\b"
+            ]
+        }
+    ]
+}
